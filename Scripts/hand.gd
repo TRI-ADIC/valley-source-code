@@ -21,7 +21,6 @@ var default_position
 func _ready() -> void:
 	default_rotation = viewmodel.rotation
 	default_position = viewmodel.position
-	print(default_position)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
