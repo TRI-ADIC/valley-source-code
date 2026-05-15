@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dnh2atcr2mn0n"]
 
 [ext_resource type="Script" uid="uid://g3icjla1v54d" path="res://Scripts/character_body_3d.gd" id="1_a02cp"]
+[ext_resource type="Script" uid="uid://c1vbyqh1eqiya" path="res://Scripts/hand.gd" id="2_go701"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -19,13 +20,15 @@ glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f3sb7"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_go701"]
+
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_a02cp"]
 albedo_color = Color(0.37036446, 0.3703645, 0.37036446, 1)
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_go701"]
 albedo_color = Color(0.30140078, 0.40327075, 0.25642157, 1)
 
-[node name="world" type="Node3D" unique_id=411172354]
+[node name="World" type="Node3D" unique_id=411172354]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=490516875]
 transform = Transform3D(-0.86602545, -0.065539986, -0.49568596, 0, -0.9913718, 0.13107985, -0.50000006, 0.11351846, 0.8585531, 0, 0, 0)
@@ -34,20 +37,28 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1705628936]
 environment = SubResource("Environment_tlwt5")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1476496864]
+[node name="AnthroCat" type="CharacterBody3D" parent="." unique_id=1476496864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.515234, 0)
 script = ExtResource("1_a02cp")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=798135260]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnthroCat" unique_id=798135260]
 mesh = SubResource("CapsuleMesh_gv5m4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1316694267]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnthroCat" unique_id=1316694267]
 shape = SubResource("CapsuleShape3D_f3sb7")
 
-[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=725942095]
+[node name="Head" type="Node3D" parent="AnthroCat" unique_id=725942095]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.60046935, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=219316]
+[node name="Camera3D" type="Camera3D" parent="AnthroCat/Head" unique_id=219316]
+
+[node name="Hand" type="Node3D" parent="AnthroCat/Head/Camera3D" unique_id=2016784914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34137273, -0.16254616, -0.17992002)
+script = ExtResource("2_go701")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnthroCat/Head/Camera3D/Hand" unique_id=968091584]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, -0.6098527)
+mesh = SubResource("BoxMesh_go701")
 
 [node name="Environment" type="Node3D" parent="." unique_id=551454675]
 

@@ -10,7 +10,7 @@ var gravity = 45.0
 #Head bob variables
 const BOB_FREQUENCY = 2.0
 const BOB_AMPLITUDE = 0.08
-var headbob_camera_transform = 0.0
+var headbob_time = 0.0
 
 #FOV variables
 const BASE_FOV = 75.0
@@ -29,10 +29,10 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 		
 func _headbob(time) -> Vector3:
-	var pos = Vector3.ZERO
-	pos.y = sin(time * BOB_FREQUENCY) * BOB_AMPLITUDE
-	pos.x = cos(time * BOB_FREQUENCY / 2) * BOB_AMPLITUDE
-	return pos
+	var position = Vector3.ZERO
+	position.y = sin(time * BOB_FREQUENCY) * BOB_AMPLITUDE
+	position.x = cos(time * BOB_FREQUENCY / 2) * BOB_AMPLITUDE
+	return position
 	
 func _fov_change(delta: float) -> float:
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
@@ -71,8 +71,8 @@ func _physics_process(delta: float) -> void:
 		velocity.z = lerp(velocity.z, direction.z * speed, delta * 2.0)
 		
 	#Head bob
-	headbob_camera_transform += delta * velocity.length() * float (is_on_floor())
-	camera.transform.origin = _headbob(headbob_camera_transform)
+	headbob_time += delta * velocity.length() * float (is_on_floor())
+	camera.transform.origin = _headbob(headbob_time)
 	
 	#FOV change
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
