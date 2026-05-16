@@ -75,6 +75,9 @@ script = ExtResource("3_5a7ea")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, -0.44535097)
 mesh = SubResource("SphereMesh_go701")
 
+[node name="SendPoint" type="Node3D" parent="AnthroCat/Head/Camera3D" unique_id=1912786574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.022191)
+
 [node name="Environment" type="Node3D" parent="." unique_id=551454675]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Environment" unique_id=747268470]
