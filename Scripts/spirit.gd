@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var viewmodel = $"."
 @onready var viewmodel_mesh = $MeshInstance3D
-@onready var send_point = $"../SendPoint"
+@onready var raycast = $"../RayCast3D"
 
 # Delay variables
 const SENSITIVITY = 0.5
@@ -21,19 +21,33 @@ func _ready() -> void:
 	_float_object_up()
 	default_rotation = viewmodel.rotation
 	default_position = viewmodel_mesh.position
-	send_position = send_point.position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	_spirit_move_delay(delta)
 	
-	if Input.is_action_just_pressed("send"):
+	# Sending out spirit
+	if Input.is_action_pressed("send"):
 		var tween = create_tween()
-		tween.tween_property(viewmodel_mesh, "position", send_position, 0.5).set_trans(Tween.TRANS_QUAD)
+		tween.set_trans(Tween.TRANS_QUAD)
+		tween.set_ease(Tween.EASE_OUT)
+		if raycast.is_colliding():
+			var raycast_point = raycast.get_collision_point()
+			tween.tween_property(viewmodel_mesh, "global_position", raycast_point, 0.5)
+		else:
+			var raycast_endpoint = $"../RayCastEndPoint".global_position
+			tween.tween_property(viewmodel_mesh, "global_position", raycast_endpoint, 0.5)
+		# Disable inheriting of parent (so spirit doesn't rotate with camera)
+		viewmodel_mesh.top_level = true
 		
+	# Retrieving spirit
 	if Input.is_action_just_pressed("retrieve"):
 		var tween = create_tween()
-		tween.tween_property(viewmodel_mesh, "position", default_position, 0.5).set_trans(Tween.TRANS_QUAD)
+		tween.set_trans(Tween.TRANS_QUAD)
+		tween.tween_property(viewmodel_mesh, "position", default_position, 0.5)
+		# Enable inheriting of parent (so spirit rotates with camera again)
+		viewmodel_mesh.top_level = false
 	
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -41,12 +55,12 @@ func _input(event):
 	
 func _float_object_up():
 	var tween = create_tween()
-	tween.tween_property(self, "position", position + Vector3(0, 0.25, 0), 2).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(viewmodel, "position", position + Vector3(0, 0.25, 0), 2).set_trans(Tween.TRANS_SINE)
 	tween.tween_callback(_float_object_down)
 	
 func _float_object_down():
 	var tween = create_tween()
-	tween.tween_property(self, "position", position + Vector3(0, -0.25, 0), 2).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(viewmodel, "position", position + Vector3(0, -0.25, 0), 2).set_trans(Tween.TRANS_SINE)
 	tween.tween_callback(_float_object_up)
 	
 func _spirit_move_delay(delta: float):

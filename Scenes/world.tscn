@@ -68,15 +68,20 @@ transform = Transform3D(0.19947451, 0, 0, 0, 0.10008259, 0, 0, 0, 0.2896312, 0, 
 mesh = SubResource("BoxMesh_go701")
 
 [node name="Spirit" type="Node3D" parent="AnthroCat/Head/Camera3D" unique_id=1957678263]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34221935, 0.1068337, -0.36067855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34221935, 0.07880998, -0.36067855)
 script = ExtResource("3_5a7ea")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnthroCat/Head/Camera3D/Spirit" unique_id=1599315806]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, -0.44535097)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.043509007, -0.38714612)
 mesh = SubResource("SphereMesh_go701")
 
-[node name="SendPoint" type="Node3D" parent="AnthroCat/Head/Camera3D" unique_id=1912786574]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.022191)
+[node name="RayCast3D" type="RayCast3D" parent="AnthroCat/Head/Camera3D" unique_id=801409789]
+transform = Transform3D(-1, 8.742276e-08, 0, 3.821371e-15, 4.371138e-08, -1, -8.742278e-08, -0.9999998, -4.371139e-08, 0, 0, 0)
+exclude_parent = false
+target_position = Vector3(0, 6.5, 0)
+
+[node name="RayCastEndPoint" type="Node3D" parent="AnthroCat/Head/Camera3D" unique_id=969469291]
+transform = Transform3D(1, 0, 0, -1.009742e-28, 1, 0, -7.1054274e-15, -3.5527137e-15, 1, 0, 0, -6.5)
 
 [node name="Environment" type="Node3D" parent="." unique_id=551454675]
 
