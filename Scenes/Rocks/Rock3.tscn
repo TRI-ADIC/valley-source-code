@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://w25dl7d7cebn"]
+
+[ext_resource type="Texture2D" uid="uid://c14odx02yfxnt" path="res://Assets/Stone-Rock-PNG-Photo-Image-pixel-colored.png" id="1_lln5j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvwti"]
+size = Vector3(10.784262, 6.9084287, 16.638926)
+
+[node name="Rock3" type="Node3D" unique_id=1812891972]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1120763383]
+transform = Transform3D(0.10595324, 0, 0, 0, 0.08472154, 0, 0, 0, 0.1271718, 0, 0.14475298, 0)
+billboard = 2
+shaded = true
+texture = ExtResource("1_lln5j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D" unique_id=339963154]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/StaticBody3D" unique_id=1033431557]
+transform = Transform3D(1, 0, 0, 0, 1.0000011, 0, 0, 0, 1.0000236, 0.0245705, 0.44876647, 0.009170159)
+shape = SubResource("BoxShape3D_rvwti")

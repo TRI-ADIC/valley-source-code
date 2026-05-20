@@ -1,10 +1,18 @@
 [gd_scene format=3 uid="uid://du34bnchj5rbl"]
 
-[ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/AnthroCat.tscn" id="1_ijv5j"]
+[ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/Player/AnthroCat.tscn" id="1_kvrmh"]
+[ext_resource type="PackedScene" uid="uid://d6dkamwqldpx" path="res://Scenes/Trees/Tree1.tscn" id="2_3f2ts"]
+[ext_resource type="PackedScene" uid="uid://d2s4qlq0neb3n" path="res://Scenes/Trees/Tree2.tscn" id="3_llmnm"]
+[ext_resource type="PackedScene" uid="uid://bisaq1snjohps" path="res://Scenes/Trees/Tree3.tscn" id="4_06fyf"]
+[ext_resource type="PackedScene" uid="uid://0iqhtf01u3gg" path="res://Scenes/Rocks/Rock1.tscn" id="5_yhwne"]
+[ext_resource type="PackedScene" uid="uid://cr38nu4ixt87j" path="res://Scenes/Rocks/Rock2.tscn" id="6_d7riv"]
+[ext_resource type="PackedScene" uid="uid://w25dl7d7cebn" path="res://Scenes/Rocks/Rock3.tscn" id="7_s5645"]
+[ext_resource type="PackedScene" uid="uid://b7f701phernm5" path="res://Scenes/Logs/Log1.tscn" id="8_qockf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_752sw"]
-sky_top_color = Color(0, 0, 0, 1)
+sky_top_color = Color(0.10571615, 6.545782e-06, 0.4761901, 1)
 sky_horizon_color = Color(0, 0, 0, 1)
+sky_curve = 3.3940845
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0, 0, 0, 1)
 
@@ -32,8 +40,8 @@ transform = Transform3D(-0.86602545, -0.06553995, -0.49568596, 0.022986611, -0.9
 visible = false
 shadow_enabled = true
 
-[node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("1_ijv5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.17045, 6.2787914, 0)
+[node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("1_kvrmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.17837, 6.2787914, 0)
 
 [node name="CSGs" type="Node3D" parent="." unique_id=912317432]
 
@@ -117,3 +125,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.078815, 11.65069, -0.4790
 light_color = Color(0.389113, 0.7076233, 0.67991775, 1)
 light_energy = 3.534
 omni_range = 8.413098
+
+[node name="Trees" type="Node3D" parent="." unique_id=699898579]
+
+[node name="Tree1" parent="Trees" unique_id=1812891972 instance=ExtResource("2_3f2ts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.4127445, -7.7007265)
+
+[node name="Tree2" parent="Trees" unique_id=1844227335 instance=ExtResource("3_llmnm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6730623, 2.4489176)
+
+[node name="Tree3" parent="Trees" unique_id=1635951881 instance=ExtResource("4_06fyf")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, -7.20349, 4.386731, 0)
+
+[node name="Rocks" type="Node3D" parent="." unique_id=1716793060]
+
+[node name="Rock1" parent="Rocks" unique_id=1117292729 instance=ExtResource("5_yhwne")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, -19.851416, 3.5302382, -0.1590476)
+
+[node name="Rock2" parent="Rocks" unique_id=2073659234 instance=ExtResource("6_d7riv")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, -17.835644, 3.772212, 0.025990248)
+
+[node name="Rock3" parent="Rocks" unique_id=1700837044 instance=ExtResource("7_s5645")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, -17.27164, 3.6839614, 3.5521908)
+
+[node name="Logs" type="Node3D" parent="." unique_id=224432411]
+
+[node name="Rock3" parent="Logs" unique_id=1808273357 instance=ExtResource("8_qockf")]
+transform = Transform3D(0.25733712, -0.10768369, 0.991116, 0.8431899, 1.8578987, 1.4901161e-08, -1.9176729, 0.8024572, 0.13300024, -9.769354, 5.4858894, -3.8718586)

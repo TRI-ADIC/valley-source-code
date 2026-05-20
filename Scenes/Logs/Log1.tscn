@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b7f701phernm5"]
+
+[ext_resource type="Texture2D" uid="uid://ck8st8h6qmcwj" path="res://Assets/split-log-png-82-3kn4xzawkbc2lwp-pixel-colored.png" id="1_mnbr5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvwti"]
+size = Vector3(9.814158, 0.6633887, 3.5827081)
+
+[node name="Rock3" type="Node3D" unique_id=1812891972]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1120763383]
+transform = Transform3D(0.35684592, 0, 0, 0, 0.08472155, 0, 0, 0, 0.39740267, 0, 0.14475298, 0)
+axis = 1
+shaded = true
+texture = ExtResource("1_mnbr5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D" unique_id=339963154]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/StaticBody3D" unique_id=1033431557]
+transform = Transform3D(1, 0, 0, 0, 1.0000011, 0, 0, 0, 1.0000919, 0, 0, -0.02677335)
+shape = SubResource("BoxShape3D_rvwti")

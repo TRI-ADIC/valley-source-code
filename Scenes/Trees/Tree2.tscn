@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d2s4qlq0neb3n"]
+
+[ext_resource type="Texture2D" uid="uid://dc8b77m3owbbr" path="res://Assets/isometric-tree-3d-render-png-pixel-colored.png" id="1_4cnif"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvwti"]
+size = Vector3(3.195877, 11.691689, 3.7808075)
+
+[node name="Tree2" type="Node3D" unique_id=1812891972]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1120763383]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1.6194198, 0)
+billboard = 2
+shaded = true
+texture = ExtResource("1_4cnif")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D" unique_id=37997756]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/StaticBody3D" unique_id=1033431557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18773651, -1.2426796, -0.18383026)
+shape = SubResource("BoxShape3D_rvwti")

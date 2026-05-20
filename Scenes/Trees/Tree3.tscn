@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bisaq1snjohps"]
+
+[ext_resource type="Texture2D" uid="uid://dc01qecnytrvt" path="res://Assets/Tree-PNG-pixel-colored.png" id="1_bt7eg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvwti"]
+size = Vector3(6.3146553, 21.41987, 6.535778)
+
+[node name="Tree3" type="Node3D" unique_id=1812891972]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1120763383]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 2.6712072, 0)
+billboard = 2
+shaded = true
+texture = ExtResource("1_bt7eg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D" unique_id=1104780102]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/StaticBody3D" unique_id=1033431557]
+transform = Transform3D(0.9999994, 0, 0, 0, 0.99999976, 0, 0, 0, 1, 0.057401653, -0.6870413, 0.020448685)
+shape = SubResource("BoxShape3D_rvwti")
