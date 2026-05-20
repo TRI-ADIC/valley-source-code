@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dnh2atcr2mn0n"]
 
-[ext_resource type="Script" uid="uid://g3icjla1v54d" path="res://Scripts/character_body_3d.gd" id="1_12yu6"]
-[ext_resource type="Script" uid="uid://c1vbyqh1eqiya" path="res://Scripts/hand.gd" id="2_as10u"]
-[ext_resource type="Script" uid="uid://bcqhnb6v33vfg" path="res://Scripts/spirit.gd" id="3_iulrt"]
+[ext_resource type="Script" uid="uid://g3icjla1v54d" path="res://Scripts/Player/anthro_cat.gd" id="1_12yu6"]
+[ext_resource type="Script" uid="uid://c1vbyqh1eqiya" path="res://Scripts/Player/hand.gd" id="2_as10u"]
+[ext_resource type="Script" uid="uid://bcqhnb6v33vfg" path="res://Scripts/Player/spirit.gd" id="3_iulrt"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gv5m4"]
 
