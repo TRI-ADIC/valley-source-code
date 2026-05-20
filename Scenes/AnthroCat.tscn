@@ -46,10 +46,72 @@ script = ExtResource("3_iulrt")
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.043509007, -0.38714612)
 mesh = SubResource("SphereMesh_go701")
 
+[node name="Lights" type="Node3D" parent="Head/Camera3D/Spirit/MeshInstance3D" unique_id=74992989]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1934625501]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, 0, -0.98404455)
+light_color = Color(0.5703529, 1, 0.9339138, 1)
+light_energy = 0.15
+light_size = 2.0
+light_specular = 4.0
+shadow_enabled = true
+shadow_bias = 1.684
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1866628453]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 1.037822, 0, 0)
+light_color = Color(0.5703529, 1, 0.9339138, 1)
+light_energy = 0.15
+light_size = 2.0
+light_specular = 4.0
+shadow_enabled = true
+shadow_bias = 1.684
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1704010515]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, 0, 0.9924638)
+light_color = Color(0.5703529, 1, 0.9339138, 1)
+light_energy = 0.15
+light_size = 2.0
+light_specular = 4.0
+shadow_enabled = true
+shadow_bias = 1.684
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1193744370]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, -1.3239602, 0, 0)
+light_color = Color(0.5703529, 1, 0.9339138, 1)
+light_energy = 0.15
+light_size = 2.0
+light_specular = 4.0
+shadow_enabled = true
+shadow_bias = 1.684
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1026681635]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, 1.1107683, 0)
+light_color = Color(0.5703529, 1, 0.9339138, 1)
+light_energy = 0.15
+light_size = 2.0
+light_specular = 4.0
+shadow_enabled = true
+shadow_bias = 1.684
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=124518846]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, -1.12064, 0)
+light_color = Color(0.5703529, 1, 0.9339138, 1)
+light_energy = 0.15
+light_size = 2.0
+light_specular = 4.0
+shadow_enabled = true
+shadow_bias = 1.684
+distance_fade_begin = 7.0
+
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=801409789]
 transform = Transform3D(-1, 8.742276e-08, 0, 3.821371e-15, 4.371138e-08, -1, -8.742278e-08, -0.9999998, -4.371139e-08, 0, 0, 0)
 exclude_parent = false
-target_position = Vector3(0, 6.5, 0)
+target_position = Vector3(0, 10, 0)
 
 [node name="RayCastEndPoint" type="Node3D" parent="Head/Camera3D" unique_id=969469291]
-transform = Transform3D(1, 0, 0, -1.009742e-28, 1, 0, -7.1054274e-15, -3.5527137e-15, 1, 0, 0, -6.5)
+transform = Transform3D(1, 0, 0, -1.009742e-28, 1, 0, -7.1054274e-15, -3.5527137e-15, 1, 0, 0, -10)

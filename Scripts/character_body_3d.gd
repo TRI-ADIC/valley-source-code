@@ -8,7 +8,7 @@ const JUMP_VELOCITY = 12
 var gravity = 45.0 
 
 #Head bob variables
-const BOB_FREQUENCY = 2.0
+const BOB_FREQUENCY = 1.5
 const BOB_AMPLITUDE = 0.08
 var headbob_time = 0.0
 

@@ -2,15 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/AnthroCat.tscn" id="1_ijv5j"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_752sw"]
-albedo_color = Color(0.37036446, 0.3703645, 0.37036446, 1)
-
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ijv5j"]
-albedo_color = Color(0.30140078, 0.40327075, 0.25642157, 1)
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_752sw"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Sky" id="Sky_fj7yv"]
 sky_material = SubResource("ProceduralSkyMaterial_752sw")
@@ -18,40 +14,106 @@ sky_material = SubResource("ProceduralSkyMaterial_752sw")
 [sub_resource type="Environment" id="Environment_ijv5j"]
 background_mode = 2
 sky = SubResource("Sky_fj7yv")
+ambient_light_energy = 0.0
 tonemap_mode = 2
 glow_enabled = true
+glow_intensity = 0.01
+glow_strength = 1.25
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_752sw"]
 
 [node name="Environment" type="Node3D" unique_id=276202814]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=760749472]
-transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, 0, 0, 0)
-use_collision = true
-material = SubResource("ORMMaterial3D_752sw")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1198655811]
-transform = Transform3D(3.8821323, 0, 0, 0, 12.814002, 0, 0, 0, 3.7462149, 3.5226612, -5.614293, 9.91011)
-use_collision = true
-size = Vector3(0.70458984, 0.9842529, 0.71240234)
-material = SubResource("ORMMaterial3D_ijv5j")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1895204205]
-transform = Transform3D(3.8821323, 0, 0, 0, 12.814002, 0, 0, 0, 3.7462149, -2.2760968, -5.0128984, 9.91011)
-use_collision = true
-size = Vector3(0.70458984, 0.9842529, 0.71240234)
-material = SubResource("ORMMaterial3D_ijv5j")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=628147465]
-transform = Transform3D(3.8698115, -1.0200895, -7.450581e-09, 0.29500124, 12.192824, 1.116527, -0.09210862, -3.8069816, 3.5759602, -8.2346735, -4.2133427, 11.214978)
-use_collision = true
-size = Vector3(0.70458984, 0.9842529, 0.71240234)
-material = SubResource("ORMMaterial3D_ijv5j")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=808752591]
 environment = SubResource("Environment_ijv5j")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=433067542]
-transform = Transform3D(-0.86602545, -0.065539986, -0.49568596, 0, -0.9913718, 0.13107985, -0.50000006, 0.11351846, 0.8585531, 0, 0, 0)
+transform = Transform3D(-0.86602545, -0.06553995, -0.49568596, 0.022986611, -0.9955424, 0.09147083, -0.49947143, 0.06782192, 0.8636716, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("1_ijv5j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5666194, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.17045, 6.2787914, 0)
+
+[node name="CSGs" type="Node3D" parent="." unique_id=912317432]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGs" unique_id=760749472]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, 0, 0, 0)
+use_collision = true
+size = Vector3(1.5957031, 159.85324, 1)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGs/CSGBox3D" unique_id=2128930386]
+transform = Transform3D(0.022574825, 0, 0, 0, 17.495144, 0, 0, 0, 0.024976885, -0.41858473, 75.801796, 0.05044825)
+operation = 2
+use_collision = true
+radius = 5.3549805
+height = 1.7217407
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGs/CSGBox3D" unique_id=1639416313]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.2094371, 84.64887, -0.19830784)
+use_collision = true
+size = Vector3(0.08499527, 90.69153, 0.06706238)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGs/CSGBox3D/CSGBox3D7" unique_id=1588600182]
+transform = Transform3D(1, 0, 0, 0, 0.82059085, -400.32016, 0, 0.00081592257, 0.8205909, -0.019356728, -7.187042, -0.08042824)
+use_collision = true
+size = Vector3(0.046281815, 76.317444, 0.04524994)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGs/CSGBox3D" unique_id=594655392]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.17893678, 90.304695, 0.15674679)
+use_collision = true
+size = Vector3(0.02155304, 102.00318, 0.019866943)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGs/CSGBox3D/CSGBox3D5" unique_id=56130342]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.00121212, 55.463844, 0.001750946)
+use_collision = true
+size = Vector3(0.07960701, 51.67743, 0.062095642)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGs" unique_id=954393359]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, 32.840275, 9.105032, 0)
+use_collision = true
+size = Vector3(0.11273193, 159.85324, 1)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGs" unique_id=1594105719]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, -2.3287182, 9.105032, 16.225939)
+use_collision = true
+size = Vector3(1.4705124, 159.85324, 0.18945313)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGs" unique_id=1400244587]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, -32.348293, 9.105032, -1.6054878)
+use_collision = true
+size = Vector3(0.11513901, 159.85324, 0.805542)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGs" unique_id=1157856210]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, -2.43037, 9.105032, -18.03425)
+use_collision = true
+size = Vector3(1.4753375, 159.85324, 0.099121094)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="Lights" type="Node3D" parent="." unique_id=1478406504]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=1751271408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5827293, 11.65069, -0.4790535)
+light_color = Color(0.389113, 0.7076233, 0.67991775, 1)
+light_energy = 3.534
+omni_range = 8.413098
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights" unique_id=1312675306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.994918, 11.65069, -0.4790535)
+light_color = Color(0.389113, 0.7076233, 0.67991775, 1)
+light_energy = 3.534
+omni_range = 8.413098
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights" unique_id=1172005170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.078815, 11.65069, -0.4790535)
+light_color = Color(0.389113, 0.7076233, 0.67991775, 1)
+light_energy = 3.534
+omni_range = 8.413098
