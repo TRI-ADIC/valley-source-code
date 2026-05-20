@@ -27,6 +27,8 @@ func _process(delta: float) -> void:
 	
 	_spirit_move_delay(delta)
 	
+	# Bug: Sending and retrieving spirit in quick succession causes spirit to come from player's origin point.
+	
 	# Sending out spirit
 	if Input.is_action_pressed("send"):
 		var tween = create_tween()
