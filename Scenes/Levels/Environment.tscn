@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://w25dl7d7cebn" path="res://Scenes/Rocks/Rock3.tscn" id="7_s5645"]
 [ext_resource type="PackedScene" uid="uid://b7f701phernm5" path="res://Scenes/Logs/Log1.tscn" id="8_qockf"]
 [ext_resource type="PackedScene" uid="uid://bnfqjo0hfs7x5" path="res://Scenes/Structures/Cauldron.tscn" id="9_3f2ts"]
+[ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Door.tscn" id="10_llmnm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_752sw"]
 sky_top_color = Color(0.10571615, 6.545782e-06, 0.4761901, 1)
@@ -96,9 +97,15 @@ size = Vector3(1.4705124, 159.85324, 0.18945313)
 material = SubResource("ORMMaterial3D_752sw")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Level" unique_id=1400244587]
-transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, -32.348293, 9.105032, -1.6054878)
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, -32.348293, 9.105032, 9.274933)
 use_collision = true
-size = Vector3(0.11513901, 159.85324, 0.805542)
+size = Vector3(0.11513901, 159.85324, 0.26202393)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Level" unique_id=376731701]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, -32.348293, 9.105032, -10.742047)
+use_collision = true
+size = Vector3(0.11513901, 159.85324, 0.2735138)
 material = SubResource("ORMMaterial3D_752sw")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Level" unique_id=1157856210]
@@ -161,3 +168,10 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.155575, 4.1481376, -9.326
 
 [node name="Cauldron2" parent="Structures" unique_id=755554697 instance=ExtResource("9_3f2ts")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.155575, 4.1481376, 10.243956)
+
+[node name="Door" parent="Structures" unique_id=25651117 node_paths=PackedStringArray("open_with_flames") instance=ExtResource("10_llmnm")]
+transform = Transform3D(1, 0, 0, 0, 9.224372, 0, 0, 0, 11.429182, -31.881563, 7.4031115, -0.48434716)
+open_with_flames = {
+NodePath("../Cauldron"): true,
+NodePath("../Cauldron2"): true
+}
