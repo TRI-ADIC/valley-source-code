@@ -71,4 +71,4 @@ func _spirit_move_delay(delta: float):
 		viewmodel.rotation = viewmodel.rotation.lerp(mouse_movement.normalized() * -DELAY_AMOUNT, DELAY_SPEED * delta)
 	else:
 		viewmodel.rotation = viewmodel.rotation.lerp(default_rotation, DELAY_SPEED * delta)
-	
+		

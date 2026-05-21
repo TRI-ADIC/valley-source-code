@@ -15,6 +15,9 @@
 [sub_resource type="SphereMesh" id="SphereMesh_go701"]
 material = SubResource("ORMMaterial3D_5a7ea")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_u600h"]
+size = Vector3(3.1035156, 3.3394241, 2.8497086)
+
 [node name="AnthroCat" type="CharacterBody3D" unique_id=1476496864]
 script = ExtResource("1_12yu6")
 
@@ -100,6 +103,12 @@ light_specular = 0.198
 shadow_bias = 1.684
 shadow_blur = 2.782
 distance_fade_begin = 7.0
+
+[node name="Area3D" type="Area3D" parent="Head/Camera3D/Spirit/MeshInstance3D" unique_id=517854232]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Area3D" unique_id=452357604]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.20898461, 0.12868214, 0.035801888)
+shape = SubResource("BoxShape3D_u600h")
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=801409789]
 transform = Transform3D(-1, 8.742276e-08, 0, 3.821371e-15, 4.371138e-08, -1, -8.742278e-08, -0.9999998, -4.371139e-08, 0, 0, 0)
