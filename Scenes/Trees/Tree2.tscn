@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2s4qlq0neb3n"]
 
-[ext_resource type="Texture2D" uid="uid://dc8b77m3owbbr" path="res://Assets/isometric-tree-3d-render-png-pixel-colored.png" id="1_4cnif"]
+[ext_resource type="Texture2D" uid="uid://dc8b77m3owbbr" path="res://Textures/Trees/isometric-tree-3d-render-png-pixel-colored.png" id="1_4cnif"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rvwti"]
 size = Vector3(3.195877, 11.691689, 3.7808075)

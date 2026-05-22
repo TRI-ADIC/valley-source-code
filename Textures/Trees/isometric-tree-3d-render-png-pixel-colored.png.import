@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu2glyhnoa2nx"
-path.s3tc="res://.godot/imported/Rock-PNG-Transparent-Image-pixel-colored.png-3f066f7cc165a2a22a45afcb753a1c86.s3tc.ctex"
+uid="uid://dc8b77m3owbbr"
+path.s3tc="res://.godot/imported/isometric-tree-3d-render-png-pixel-colored.png-4219d5413adfaa13cbfe01e88549f079.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Rock-PNG-Transparent-Image-pixel-colored.png"
-dest_files=["res://.godot/imported/Rock-PNG-Transparent-Image-pixel-colored.png-3f066f7cc165a2a22a45afcb753a1c86.s3tc.ctex"]
+source_file="res://Textures/Trees/isometric-tree-3d-render-png-pixel-colored.png"
+dest_files=["res://.godot/imported/isometric-tree-3d-render-png-pixel-colored.png-4219d5413adfaa13cbfe01e88549f079.s3tc.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cr38nu4ixt87j"]
 
-[ext_resource type="Texture2D" uid="uid://dlxx1wlf05e0j" path="res://Assets/Rocks-Transparent-Background-pixel-colored.png" id="1_o7bww"]
+[ext_resource type="Texture2D" uid="uid://dlxx1wlf05e0j" path="res://Textures/Rocks/Rocks-Transparent-Background-pixel-colored.png" id="1_o7bww"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rvwti"]
 size = Vector3(10.256024, 7.7631464, 10.636911)

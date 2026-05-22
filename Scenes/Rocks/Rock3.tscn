@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://w25dl7d7cebn"]
 
-[ext_resource type="Texture2D" uid="uid://c14odx02yfxnt" path="res://Assets/Stone-Rock-PNG-Photo-Image-pixel-colored.png" id="1_lln5j"]
+[ext_resource type="Texture2D" uid="uid://c14odx02yfxnt" path="res://Textures/Rocks/Stone-Rock-PNG-Photo-Image-pixel-colored.png" id="1_lln5j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rvwti"]
 size = Vector3(10.784262, 6.9084287, 16.638926)

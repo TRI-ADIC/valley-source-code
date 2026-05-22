@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck8st8h6qmcwj"
-path.s3tc="res://.godot/imported/split-log-png-82-3kn4xzawkbc2lwp-pixel-colored.png-5996a65cb644547e053157e9ebb99874.s3tc.ctex"
+uid="uid://dlxx1wlf05e0j"
+path.s3tc="res://.godot/imported/Rocks-Transparent-Background-pixel-colored.png-8d3c74c340bc6222c0a3ecbd1ea04987.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/split-log-png-82-3kn4xzawkbc2lwp-pixel-colored.png"
-dest_files=["res://.godot/imported/split-log-png-82-3kn4xzawkbc2lwp-pixel-colored.png-5996a65cb644547e053157e9ebb99874.s3tc.ctex"]
+source_file="res://Textures/Rocks/Rocks-Transparent-Background-pixel-colored.png"
+dest_files=["res://.godot/imported/Rocks-Transparent-Background-pixel-colored.png-8d3c74c340bc6222c0a3ecbd1ea04987.s3tc.ctex"]
 
 [params]
 

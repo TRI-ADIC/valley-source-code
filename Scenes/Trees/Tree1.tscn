@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d6dkamwqldpx"]
 
-[ext_resource type="Texture2D" uid="uid://du5hjl4mr0bsp" path="res://Assets/Tree-pixel-colored.png" id="1_rvwti"]
+[ext_resource type="Texture2D" uid="uid://du5hjl4mr0bsp" path="res://Textures/Trees/Tree-pixel-colored.png" id="1_rvwti"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rvwti"]
 size = Vector3(6.937805, 28.95221, 7.9066772)
