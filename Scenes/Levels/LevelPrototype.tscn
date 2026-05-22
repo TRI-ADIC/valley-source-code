@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://du34bnchj5rbl"]
+
+[ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/Player/AnthroCat.tscn" id="1_30o0o"]
+[ext_resource type="Texture2D" uid="uid://cf816xcjfa16x" path="res://Textures/Valley/Grass.png" id="2_myxab"]
+[ext_resource type="Texture2D" uid="uid://cxb553kql3lit" path="res://Textures/Valley/Dirt.png" id="3_ddudt"]
+[ext_resource type="Texture2D" uid="uid://dpa3e3c216eec" path="res://Textures/Valley/Stone.png" id="4_w58i8"]
+[ext_resource type="PackedScene" uid="uid://d6dkamwqldpx" path="res://Scenes/Trees/Tree1.tscn" id="5_s0kei"]
+[ext_resource type="PackedScene" uid="uid://d2s4qlq0neb3n" path="res://Scenes/Trees/Tree2.tscn" id="6_cy7lm"]
+[ext_resource type="PackedScene" uid="uid://bisaq1snjohps" path="res://Scenes/Trees/Tree3.tscn" id="7_oiyy3"]
+[ext_resource type="PackedScene" uid="uid://0iqhtf01u3gg" path="res://Scenes/Rocks/Rock1.tscn" id="8_7ssxf"]
+[ext_resource type="PackedScene" uid="uid://cr38nu4ixt87j" path="res://Scenes/Rocks/Rock2.tscn" id="9_hbnv6"]
+[ext_resource type="PackedScene" uid="uid://w25dl7d7cebn" path="res://Scenes/Rocks/Rock3.tscn" id="10_du1da"]
+[ext_resource type="PackedScene" uid="uid://b7f701phernm5" path="res://Scenes/Logs/Log1.tscn" id="11_qlcbb"]
+[ext_resource type="PackedScene" uid="uid://bnfqjo0hfs7x5" path="res://Scenes/Structures/Cauldron.tscn" id="12_p51c2"]
+[ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Door.tscn" id="13_cbea5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_752sw"]
+sky_top_color = Color(0.10571615, 6.545782e-06, 0.4761901, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_curve = 3.3940845
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_fj7yv"]
+sky_material = SubResource("ProceduralSkyMaterial_752sw")
+
+[sub_resource type="Environment" id="Environment_ijv5j"]
+background_mode = 2
+sky = SubResource("Sky_fj7yv")
+ambient_light_energy = 0.0
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 0.01
+glow_strength = 1.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yhwne"]
+albedo_texture = ExtResource("2_myxab")
+uv1_scale = Vector3(64, 64, 64)
+uv1_triplanar = true
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_752sw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d7riv"]
+albedo_texture = ExtResource("3_ddudt")
+uv1_scale = Vector3(64, 64, 64)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5645"]
+albedo_texture = ExtResource("4_w58i8")
+uv1_scale = Vector3(64, 64, 64)
+uv1_triplanar = true
+
+[node name="LevelPrototype" type="Node3D" unique_id=276202814]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=808752591]
+environment = SubResource("Environment_ijv5j")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=433067542]
+transform = Transform3D(-0.86602545, -0.06553995, -0.49568596, 0.022986611, -0.9955424, 0.09147083, -0.49947143, 0.06782192, 0.8636716, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("1_30o0o")]
+
+[node name="Level" type="Node3D" parent="." unique_id=912317432]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -5.6540813, -21.920012)
+
+[node name="Boxes" type="Node3D" parent="Level" unique_id=455845986]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level/Boxes" unique_id=760749472]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, 0, 0, 0)
+use_collision = true
+size = Vector3(1.5957031, 159.85324, 1)
+material = SubResource("StandardMaterial3D_yhwne")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Level/Boxes/CSGBox3D" unique_id=2128930386]
+transform = Transform3D(0.022574825, 0, 0, 0, 17.495144, 0, 0, 0, 0.024976885, -0.41858473, 75.801796, 0.05044825)
+operation = 2
+use_collision = true
+radius = 5.3549805
+height = 1.7217407
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Level/Boxes/CSGBox3D" unique_id=1639416313]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.2094371, 84.64887, -0.19830784)
+use_collision = true
+size = Vector3(0.08499527, 90.69153, 0.06706238)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Level/Boxes/CSGBox3D/CSGBox3D7" unique_id=1588600182]
+transform = Transform3D(1, 0, 0, 0, 0.82059085, -400.32016, 0, 0.00081592257, 0.8205909, -0.019356728, -7.187042, -0.08042824)
+use_collision = true
+size = Vector3(0.046281815, 76.317444, 0.04524994)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Level/Boxes/CSGBox3D" unique_id=594655392]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.17893678, 90.304695, 0.15674679)
+use_collision = true
+size = Vector3(0.02155304, 102.00318, 0.019866943)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Level/Boxes/CSGBox3D/CSGBox3D5" unique_id=56130342]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.00121212, 55.463844, 0.001750946)
+use_collision = true
+size = Vector3(0.07960701, 51.67743, 0.062095642)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level/Boxes" unique_id=954393359]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, 32.840275, 9.105032, 0)
+use_collision = true
+size = Vector3(0.11273193, 159.85324, 1)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Level/Boxes" unique_id=1594105719]
+transform = Transform3D(44.29713, -2.4984863e-09, -1.7500735e-06, 1.936289e-06, -2.4984863e-09, 40.03701, -1.936289e-06, -0.057158705, -1.7500732e-06, -2.3287182, 9.0023985, 16.225939)
+use_collision = true
+size = Vector3(1.4705124, 159.85324, 0.23022461)
+material = SubResource("StandardMaterial3D_d7riv")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Level/Boxes" unique_id=1400244587]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, -32.348293, 9.105032, 9.274933)
+use_collision = true
+size = Vector3(0.11513901, 159.85324, 0.26202393)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Level/Boxes" unique_id=376731701]
+transform = Transform3D(44.29713, 0, 0, 0, 0.05715871, 0, 0, 0, 40.037014, -32.348293, 9.105032, -10.742047)
+use_collision = true
+size = Vector3(0.11513901, 159.85324, 0.2735138)
+material = SubResource("ORMMaterial3D_752sw")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Level/Boxes" unique_id=1157856210]
+transform = Transform3D(44.29713, 2.4984863e-09, -1.7500735e-06, -1.936289e-06, -2.4984863e-09, -40.03701, -1.936289e-06, 0.057158705, -1.7500732e-06, -2.4303684, 8.755589, -18.03425)
+use_collision = true
+size = Vector3(1.4753375, 159.85324, 0.24328613)
+material = SubResource("StandardMaterial3D_s5645")
+
+[node name="Lights" type="Node3D" parent="Level" unique_id=1478406504]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Level/Lights" unique_id=1751271408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5827293, 11.65069, -0.4790535)
+light_color = Color(0.389113, 0.7076233, 0.67991775, 1)
+light_energy = 3.534
+omni_range = 8.413098
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Level/Lights" unique_id=1312675306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.994918, 11.65069, -0.4790535)
+light_color = Color(0.389113, 0.7076233, 0.67991775, 1)
+light_energy = 3.534
+omni_range = 8.413098
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Level/Lights" unique_id=1172005170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.078815, 11.65069, -0.4790535)
+light_color = Color(0.389113, 0.7076233, 0.67991775, 1)
+light_energy = 3.534
+omni_range = 8.413098
+
+[node name="Trees" type="Node3D" parent="Level" unique_id=699898579]
+
+[node name="Tree1" parent="Level/Trees" unique_id=1812891972 instance=ExtResource("5_s0kei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.4127445, -7.7007265)
+
+[node name="Tree2" parent="Level/Trees" unique_id=1844227335 instance=ExtResource("6_cy7lm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6730623, 2.4489176)
+
+[node name="Tree3" parent="Level/Trees" unique_id=1635951881 instance=ExtResource("7_oiyy3")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, -7.20349, 4.386731, 0)
+
+[node name="Rocks" type="Node3D" parent="Level" unique_id=1716793060]
+
+[node name="Rock1" parent="Level/Rocks" unique_id=1117292729 instance=ExtResource("8_7ssxf")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, -19.851416, 3.5302382, -0.1590476)
+
+[node name="Rock2" parent="Level/Rocks" unique_id=2073659234 instance=ExtResource("9_hbnv6")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, -17.835644, 3.772212, 0.025990248)
+
+[node name="Rock3" parent="Level/Rocks" unique_id=1700837044 instance=ExtResource("10_du1da")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, -17.27164, 3.6839614, 3.5521908)
+
+[node name="Logs" type="Node3D" parent="Level" unique_id=224432411]
+
+[node name="Rock3" parent="Level/Logs" unique_id=1808273357 instance=ExtResource("11_qlcbb")]
+transform = Transform3D(0.25733712, -0.10768369, 0.991116, 0.8431899, 1.8578987, 1.4901161e-08, -1.9176729, 0.8024572, 0.13300024, -9.769354, 5.4858894, -3.8718586)
+
+[node name="Structures" type="Node3D" parent="Level" unique_id=294135214]
+
+[node name="Cauldron" parent="Level/Structures" unique_id=1241995679 instance=ExtResource("12_p51c2")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.155575, 4.1481376, -9.326397)
+
+[node name="Cauldron2" parent="Level/Structures" unique_id=755554697 instance=ExtResource("12_p51c2")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.155575, 4.1481376, 10.243956)
+
+[node name="Door" parent="Level/Structures" unique_id=25651117 node_paths=PackedStringArray("open_with_flames") instance=ExtResource("13_cbea5")]
+transform = Transform3D(1, 0, 0, 0, 9.224372, 0, 0, 0, 11.429182, -31.881563, 7.4031115, -0.48434716)
+open_with_flames = {
+NodePath("../Cauldron"): true,
+NodePath("../Cauldron2"): true
+}
