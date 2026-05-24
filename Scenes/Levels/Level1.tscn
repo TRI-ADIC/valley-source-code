@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://op1pysbmw3kg"]
+
+[ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/Player/AnthroCat.tscn" id="1_5jgm0"]
+[ext_resource type="Texture2D" uid="uid://cf816xcjfa16x" path="res://Textures/Valley/Grass.png" id="2_36ke7"]
+[ext_resource type="Texture2D" uid="uid://cxb553kql3lit" path="res://Textures/Valley/Dirt.png" id="3_riv1q"]
+[ext_resource type="PackedScene" uid="uid://bnfqjo0hfs7x5" path="res://Scenes/Structures/Cauldron.tscn" id="4_xvio3"]
+[ext_resource type="PackedScene" uid="uid://laxkc6o10avw" path="res://Scenes/Structures/Cabin.tscn" id="5_kri6y"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5jgm0"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_36ke7"]
+sky_material = SubResource("ProceduralSkyMaterial_5jgm0")
+
+[sub_resource type="Environment" id="Environment_riv1q"]
+background_mode = 2
+sky = SubResource("Sky_36ke7")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riv1q"]
+albedo_texture = ExtResource("2_36ke7")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4d3fe"]
+albedo_texture = ExtResource("3_riv1q")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ipdw"]
+albedo_texture = ExtResource("3_riv1q")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8h4de"]
+albedo_texture = ExtResource("3_riv1q")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xvio3"]
+albedo_texture = ExtResource("3_riv1q")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kri6y"]
+albedo_texture = ExtResource("3_riv1q")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+
+[node name="Level1" type="Node3D" unique_id=1404524287]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=460644597]
+environment = SubResource("Environment_riv1q")
+
+[node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("1_5jgm0")]
+
+[node name="Level" type="Node3D" parent="." unique_id=1447044637]
+
+[node name="Valley" type="Node3D" parent="Level" unique_id=1918762237]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level/Valley" unique_id=2025591242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.074768, -1.7494425, -52.7937)
+use_collision = true
+size = Vector3(96.973755, 1, 106.5874)
+material = SubResource("StandardMaterial3D_riv1q")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Level/Valley" unique_id=158325929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.330353, 507.43494, -28.904419)
+use_collision = true
+size = Vector3(14.462585, 1019.36865, 58.808838)
+material = SubResource("StandardMaterial3D_4d3fe")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Level/Valley" unique_id=415219613]
+transform = Transform3D(0.8893126, 0, 0.4572997, 0, 1, 0, -0.4572997, 0, 0.8893126, 33.88717, 516.762, -60.881546)
+use_collision = true
+size = Vector3(14.462585, 1038.023, 58.808838)
+material = SubResource("StandardMaterial3D_3ipdw")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Level/Valley" unique_id=929533314]
+transform = Transform3D(0.81166565, 0, -0.5841222, 0, 1, 0, 0.5841222, 0, 0.81166565, 46.1827, 519.5705, -93.62199)
+use_collision = true
+size = Vector3(14.462585, 1043.6398, 58.808838)
+material = SubResource("StandardMaterial3D_8h4de")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level/Valley" unique_id=1112023199]
+transform = Transform3D(0.98120856, 0, 0.19295011, 0, 1, 0, -0.19295011, 0, 0.98120856, -29.217587, 531.3795, -24.537683)
+use_collision = true
+size = Vector3(8.748047, 1067.2578, 53.510742)
+material = SubResource("StandardMaterial3D_xvio3")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Level/Valley" unique_id=573484196]
+transform = Transform3D(0.9993226, 0, 0.036800683, 0, 1, 0, -0.036800683, 0, 0.9993226, -32.562103, 527.4332, -62.781586)
+use_collision = true
+size = Vector3(8.748047, 1059.3652, 105.80469)
+material = SubResource("StandardMaterial3D_kri6y")
+
+[node name="Structures" type="Node3D" parent="Level" unique_id=879343897]
+
+[node name="Cauldron" parent="Level/Structures" unique_id=1241995679 instance=ExtResource("4_xvio3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.439339, -1.526403, -88.89572)
+
+[node name="Cabin" parent="." unique_id=1687687484 instance=ExtResource("5_kri6y")]
+transform = Transform3D(0.45641476, 0, -0.8897671, 0, 1, 0, 0.8897671, 0, 0.45641476, 12.144485, -0.9306754, -53.324818)
