@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://laxkc6o10avw"]
 
 [ext_resource type="Texture2D" uid="uid://ceqrrf3wejlgy" path="res://Textures/Valley/Planks.png" id="1_ef8n4"]
+[ext_resource type="Texture2D" uid="uid://bv3ht8k75ccbw" path="res://Textures/Items/open-book-transparent-background-pixelatedcolor.png" id="2_ltbte"]
+[ext_resource type="Texture2D" uid="uid://bvm7w2flvsbuu" path="res://Textures/Items/Blue-Pen-PNG-Download-Image(1).png" id="3_5nj3b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x012u"]
 albedo_texture = ExtResource("1_ef8n4")
@@ -148,3 +150,15 @@ transform = Transform3D(0.82127863, 0, 0.57052726, 0, 1, 0, -0.57052726, 0, 0.82
 use_collision = true
 size = Vector3(1.8905773, 1.4495392, 2.1543293)
 material = SubResource("StandardMaterial3D_pjuwr")
+
+[node name="Items" type="Node3D" parent="." unique_id=267973206]
+
+[node name="Book" type="Sprite3D" parent="Items" unique_id=295412037]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 3.6639433, 1.36226, -2.742011)
+billboard = 2
+texture = ExtResource("2_ltbte")
+
+[node name="Pen" type="Sprite3D" parent="Items" unique_id=1368135923]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 3.1458392, 1.175615, -2.5309012)
+billboard = 2
+texture = ExtResource("3_5nj3b")
