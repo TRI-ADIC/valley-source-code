@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b0icl6wgnyy5a"]
+
+[ext_resource type="Script" uid="uid://qif6ftwh2pqh" path="res://Scripts/Structures/bridge.gd" id="1_3gfhm"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_uubhm"]
+albedo_color = Color(0.20081225, 0.14471987, 0.27422827, 1)
+
+[node name="Bridge" type="Node3D" unique_id=25651117]
+script = ExtResource("1_3gfhm")
+
+[node name="BridgeMesh" type="CSGBox3D" parent="." unique_id=1363932799]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -17.03207, -12.940918)
+use_collision = true
+size = Vector3(3.53125, 1, 26.881836)
+material = SubResource("ORMMaterial3D_uubhm")
+
+[node name="BridgeMesh2" type="CSGBox3D" parent="BridgeMesh" unique_id=1080504101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -74.864624, 0.24859619)
+use_collision = true
+size = Vector3(3.53125, 149.75757, 2.6382446)
+material = SubResource("ORMMaterial3D_uubhm")
+
+[node name="RaisedPoint" type="Node3D" parent="." unique_id=1001919182]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.940918)

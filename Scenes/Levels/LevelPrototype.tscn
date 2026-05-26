@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://w25dl7d7cebn" path="res://Scenes/Rocks/Rock3.tscn" id="10_du1da"]
 [ext_resource type="PackedScene" uid="uid://b7f701phernm5" path="res://Scenes/Logs/Log1.tscn" id="11_qlcbb"]
 [ext_resource type="PackedScene" uid="uid://bnfqjo0hfs7x5" path="res://Scenes/Structures/CauldronUnlit.tscn" id="12_p51c2"]
-[ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Door.tscn" id="13_cbea5"]
+[ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Bridge.tscn" id="13_cbea5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_752sw"]
 sky_top_color = Color(0.10571615, 6.545782e-06, 0.4761901, 1)
@@ -189,8 +189,8 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.155575, 4.1481376, -9.326
 [node name="Cauldron2" parent="Level/Structures" unique_id=755554697 instance=ExtResource("12_p51c2")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.155575, 4.1481376, 10.243956)
 
-[node name="Door" parent="Level/Structures" unique_id=25651117 node_paths=PackedStringArray("open_with_flames") instance=ExtResource("13_cbea5")]
-transform = Transform3D(1, 0, 0, 0, 9.224372, 0, 0, 0, 11.429182, -31.881563, 7.4031115, -0.48434716)
+[node name="Bridge" parent="Level/Structures" unique_id=25651117 node_paths=PackedStringArray("open_with_flames") instance=ExtResource("13_cbea5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -35.744133, 4.1763124, 1.5624258e-06)
 open_with_flames = {
 NodePath("../Cauldron"): true,
 NodePath("../Cauldron2"): true

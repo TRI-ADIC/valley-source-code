@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cr38nu4ixt87j" path="res://Scenes/Rocks/Rock2.tscn" id="5_jcebb"]
 [ext_resource type="PackedScene" uid="uid://laxkc6o10avw" path="res://Scenes/Structures/Cabin.tscn" id="5_kri6y"]
 [ext_resource type="PackedScene" uid="uid://w25dl7d7cebn" path="res://Scenes/Rocks/Rock3.tscn" id="6_f3nwb"]
+[ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Bridge.tscn" id="6_n5ptj"]
 [ext_resource type="PackedScene" uid="uid://d2s4qlq0neb3n" path="res://Scenes/Trees/Tree2.tscn" id="9_f3nwb"]
 [ext_resource type="PackedScene" uid="uid://d6dkamwqldpx" path="res://Scenes/Trees/Tree1.tscn" id="9_jcebb"]
 [ext_resource type="PackedScene" uid="uid://bisaq1snjohps" path="res://Scenes/Trees/Tree3.tscn" id="10_f3nwb"]
@@ -166,6 +167,14 @@ use_collision = true
 radius = 0.10107422
 height = 11.5421505
 material = SubResource("ORMMaterial3D_kp1yh")
+
+[node name="Bridge" parent="Level/Structures" unique_id=25651117 node_paths=PackedStringArray("open_with_flames") instance=ExtResource("6_n5ptj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4078293, -2.03951, -106.30382)
+open_with_flames = {
+NodePath("../Unlit Cauldrons/CauldronUnlit"): true,
+NodePath("../Unlit Cauldrons/CauldronUnlit2"): true,
+NodePath("../Unlit Cauldrons/CauldronUnlit3"): true
+}
 
 [node name="Rocks" type="Node3D" parent="Level" unique_id=180772629]
 
