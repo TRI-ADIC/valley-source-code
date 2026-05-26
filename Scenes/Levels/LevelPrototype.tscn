@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cr38nu4ixt87j" path="res://Scenes/Rocks/Rock2.tscn" id="9_hbnv6"]
 [ext_resource type="PackedScene" uid="uid://w25dl7d7cebn" path="res://Scenes/Rocks/Rock3.tscn" id="10_du1da"]
 [ext_resource type="PackedScene" uid="uid://b7f701phernm5" path="res://Scenes/Logs/Log1.tscn" id="11_qlcbb"]
-[ext_resource type="PackedScene" uid="uid://bnfqjo0hfs7x5" path="res://Scenes/Structures/Cauldron.tscn" id="12_p51c2"]
+[ext_resource type="PackedScene" uid="uid://bnfqjo0hfs7x5" path="res://Scenes/Structures/CauldronUnlit.tscn" id="12_p51c2"]
 [ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Door.tscn" id="13_cbea5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_752sw"]
@@ -21,12 +21,12 @@ sky_curve = 3.3940845
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_fj7yv"]
+[sub_resource type="Sky" id="Sky_30o0o"]
 sky_material = SubResource("ProceduralSkyMaterial_752sw")
 
 [sub_resource type="Environment" id="Environment_ijv5j"]
 background_mode = 2
-sky = SubResource("Sky_fj7yv")
+sky = SubResource("Sky_30o0o")
 ambient_light_energy = 0.0
 tonemap_mode = 2
 glow_enabled = true
