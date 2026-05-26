@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bnfqjo0hfs7x5"]
+
+[ext_resource type="Script" uid="uid://c28atu0righcw" path="res://Scripts/Structures/cauldron.gd" id="1_kp1yh"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_kp1yh"]
+albedo_color = Color(0.20082003, 0.13206491, 0.22104996, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_06nqu"]
+size = Vector3(1.1142578, 1.9800568, 1.1252441)
+
+[node name="CauldronUnlit" type="Node3D" unique_id=1241995679]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+script = ExtResource("1_kp1yh")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=232723155]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.0640059, 6.365017e-08)
+use_collision = true
+height = 0.27908325
+cone = true
+material = SubResource("ORMMaterial3D_kp1yh")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCylinder3D" unique_id=220333152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.046572506, -2.579057e-10)
+operation = 2
+height = 0.33216858
+cone = true
+material = SubResource("ORMMaterial3D_kp1yh")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="." unique_id=1537439651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48960483, 0)
+use_collision = true
+radius = 0.10107422
+height = 1.0259626
+material = SubResource("ORMMaterial3D_kp1yh")
+
+[node name="Area3D" type="Area3D" parent="CSGCylinder3D2" unique_id=1999881999]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCylinder3D2/Area3D" unique_id=1811027773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008300781, 0.40676117, -0.003540039)
+shape = SubResource("BoxShape3D_06nqu")
+
+[node name="Flame" type="CSGSphere3D" parent="." unique_id=1856525546]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3611182, 0)
+visible = false
+radius = 0.34203532
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Flame" unique_id=505672031]
+transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, 0.031706415, 0.6086364, 0)
+light_size = 1.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Flame" unique_id=1159494346]
+transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, -0.6001736, -0.010332227, 0)
+light_size = 1.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Flame" unique_id=1729316878]
+transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, 0.0711122, -0.010332227, 0.82852256)
+light_size = 1.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Flame" unique_id=2022582788]
+transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, 0.8455691, -0.010332227, -0.009792646)
+light_size = 1.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Flame" unique_id=1641020164]
+transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, 0.0720559, -0.010332227, -0.8841672)
+light_size = 1.0
+omni_range = 4.80314
+
+[connection signal="area_entered" from="CSGCylinder3D2/Area3D" to="." method="_on_area_3d_area_entered"]

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bnfqjo0hfs7x5"]
+[gd_scene format=3 uid="uid://bnxdinvs57p5f"]
 
-[ext_resource type="Script" uid="uid://c28atu0righcw" path="res://Scripts/Structures/cauldron.gd" id="1_kp1yh"]
+[ext_resource type="Script" uid="uid://c28atu0righcw" path="res://Scripts/Structures/cauldron.gd" id="1_6p1n5"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_kp1yh"]
 albedo_color = Color(0.20082003, 0.13206491, 0.22104996, 1)
@@ -8,9 +8,9 @@ albedo_color = Color(0.20082003, 0.13206491, 0.22104996, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_06nqu"]
 size = Vector3(1.1142578, 1.9800568, 1.1252441)
 
-[node name="Cauldron" type="Node3D" unique_id=1241995679]
+[node name="CauldronLit" type="Node3D" unique_id=1241995679]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
-script = ExtResource("1_kp1yh")
+script = ExtResource("1_6p1n5")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=232723155]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1.0640059, 6.365017e-08)
@@ -42,7 +42,6 @@ shape = SubResource("BoxShape3D_06nqu")
 [node name="Flame" type="CSGSphere3D" parent="." unique_id=1856525546]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3611182, 0)
-visible = false
 radius = 0.34203532
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Flame" unique_id=505672031]
