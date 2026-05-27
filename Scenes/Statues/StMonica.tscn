@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://drwjdrqevlnrl"]
+
+[ext_resource type="Texture2D" uid="uid://bplimmf3us5pl" path="res://Textures/Statues/926_w_col-colored.png" id="1_f5jq4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0khfx"]
+size = Vector3(5.45813, 19.217468, 5.292343)
+
+[node name="StMonica" type="Node3D" unique_id=1489409521]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1475854812]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+billboard = 2
+texture = ExtResource("1_f5jq4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D" unique_id=1804107199]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/StaticBody3D" unique_id=993224311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23638916, -0.45889282, -0.40372467)
+shape = SubResource("BoxShape3D_0khfx")
