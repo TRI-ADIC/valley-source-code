@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var viewmodel = $"."
 @onready var player = $"../../.."
+@onready var hand = $AnimatedSprite3D
 
 #Sway variables
 const SENSITIVITY = 0.5
@@ -21,6 +22,7 @@ var default_position
 func _ready() -> void:
 	default_rotation = viewmodel.rotation
 	default_position = viewmodel.position
+	hand.play("default")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

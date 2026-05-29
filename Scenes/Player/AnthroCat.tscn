@@ -3,12 +3,42 @@
 [ext_resource type="Script" uid="uid://g3icjla1v54d" path="res://Scripts/Player/anthro_cat.gd" id="1_12yu6"]
 [ext_resource type="Script" uid="uid://c1vbyqh1eqiya" path="res://Scripts/Player/hand.gd" id="2_as10u"]
 [ext_resource type="Script" uid="uid://bcqhnb6v33vfg" path="res://Scripts/Player/spirit.gd" id="3_iulrt"]
+[ext_resource type="Texture2D" uid="uid://bo4r774q814uq" path="res://Animations/Hand/frame0000.png" id="4_3gqay"]
+[ext_resource type="Texture2D" uid="uid://d0irldby2gpmk" path="res://Animations/Hand/frame0001.png" id="5_q6yj8"]
+[ext_resource type="Texture2D" uid="uid://cyvtj6ed4umrc" path="res://Animations/Hand/frame0002.png" id="6_fykej"]
+[ext_resource type="Texture2D" uid="uid://bpim24ygvo44" path="res://Animations/Hand/frame0003.png" id="7_0rnwv"]
+[ext_resource type="Texture2D" uid="uid://dpbcd7l37hgqs" path="res://Animations/Hand/frame0004.png" id="8_egwur"]
+[ext_resource type="Texture2D" uid="uid://c7qongx2asalm" path="res://Animations/Hand/frame0005.png" id="9_v7rmf"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gv5m4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f3sb7"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_go701"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_yv2xv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_3gqay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q6yj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fykej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0rnwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_egwur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_v7rmf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_5a7ea"]
 
@@ -33,15 +63,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.60046935, 0)
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=219316]
 
 [node name="Hand" type="Node3D" parent="Head/Camera3D" unique_id=2016784914]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34137273, -0.16254616, -0.17992002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50760555, -0.371525, -0.17992002)
 script = ExtResource("2_as10u")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D/Hand" unique_id=968091584]
-transform = Transform3D(0.19947451, 0, 0, 0, 0.10008259, 0, 0, 0, 0.2896312, 0, -0.04693032, -0.5658482)
-mesh = SubResource("BoxMesh_go701")
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Head/Camera3D/Hand" unique_id=1975747292]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.039310634, -0.023632288, -0.5895317)
+shaded = true
+sprite_frames = SubResource("SpriteFrames_yv2xv")
 
 [node name="Spirit" type="Node3D" parent="Head/Camera3D" unique_id=1957678263]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34221935, 0.07880998, -0.36067855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5084522, 0.0381971, -0.36067855)
 script = ExtResource("3_iulrt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D/Spirit" unique_id=1599315806]
