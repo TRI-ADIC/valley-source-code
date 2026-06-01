@@ -9,6 +9,28 @@
 [ext_resource type="Texture2D" uid="uid://bpim24ygvo44" path="res://Animations/Hand/frame0003.png" id="7_0rnwv"]
 [ext_resource type="Texture2D" uid="uid://dpbcd7l37hgqs" path="res://Animations/Hand/frame0004.png" id="8_egwur"]
 [ext_resource type="Texture2D" uid="uid://c7qongx2asalm" path="res://Animations/Hand/frame0005.png" id="9_v7rmf"]
+[ext_resource type="Texture2D" uid="uid://cfel8repgdx6v" path="res://Animations/Spirit/frame0000.png" id="10_e8nqe"]
+[ext_resource type="Texture2D" uid="uid://bkfkvteodnfp7" path="res://Animations/Spirit/frame0001.png" id="11_iv6t0"]
+[ext_resource type="Texture2D" uid="uid://ykgttir38hlq" path="res://Animations/Spirit/frame0002.png" id="12_wcc8i"]
+[ext_resource type="Texture2D" uid="uid://bxgoyf68tih6r" path="res://Animations/Spirit/frame0003.png" id="13_cj6kn"]
+[ext_resource type="Texture2D" uid="uid://bdyy8h7xjsmjp" path="res://Animations/Spirit/frame0004.png" id="14_a7kkm"]
+[ext_resource type="Texture2D" uid="uid://blpnvhkglk812" path="res://Animations/Spirit/frame0005.png" id="15_i7lqs"]
+[ext_resource type="Texture2D" uid="uid://2fqo61m7nb6w" path="res://Animations/Spirit/frame0006.png" id="16_bsqrm"]
+[ext_resource type="Texture2D" uid="uid://b7a02w86pyshb" path="res://Animations/Spirit/frame0007.png" id="17_4siar"]
+[ext_resource type="Texture2D" uid="uid://bpjotn6f8rjmj" path="res://Animations/Spirit/frame0008.png" id="18_570qk"]
+[ext_resource type="Texture2D" uid="uid://bgexpyq5mm5a0" path="res://Animations/Spirit/frame0009.png" id="19_hbacd"]
+[ext_resource type="Texture2D" uid="uid://b8dj3c1xupxta" path="res://Animations/Spirit/frame0010.png" id="20_26dxo"]
+[ext_resource type="Texture2D" uid="uid://cn47qnmqqbgr8" path="res://Animations/Spirit/frame0011.png" id="21_82eqg"]
+[ext_resource type="Texture2D" uid="uid://bu638r5nirwoc" path="res://Animations/Spirit/frame0012.png" id="22_5wkg2"]
+[ext_resource type="Texture2D" uid="uid://bpreop88wj5ah" path="res://Animations/Spirit/frame0013.png" id="23_rkkcu"]
+[ext_resource type="Texture2D" uid="uid://c5v4ajgk0ejt7" path="res://Animations/Spirit/frame0014.png" id="24_fgwf7"]
+[ext_resource type="Texture2D" uid="uid://danqi60sw0hem" path="res://Animations/Spirit/frame0015.png" id="25_b3i0e"]
+[ext_resource type="Texture2D" uid="uid://wst1ubtuk4xr" path="res://Animations/Spirit/frame0016.png" id="26_5euyu"]
+[ext_resource type="Texture2D" uid="uid://bbqm0femre0a1" path="res://Animations/Spirit/frame0017.png" id="27_mcqc2"]
+[ext_resource type="Texture2D" uid="uid://dl6y5fmr6v6x" path="res://Animations/Spirit/frame0018.png" id="28_4guts"]
+[ext_resource type="Texture2D" uid="uid://bgajkhlu4sgur" path="res://Animations/Spirit/frame0019.png" id="29_laq40"]
+[ext_resource type="Texture2D" uid="uid://py7ug8vuppqi" path="res://Animations/Spirit/frame0020.png" id="30_y5l5e"]
+[ext_resource type="Texture2D" uid="uid://35yfiq305bmq" path="res://Animations/Spirit/frame0021.png" id="31_1nh4h"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gv5m4"]
 
@@ -40,10 +62,79 @@ animations = [{
 "speed": 24.0
 }]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_5a7ea"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_go701"]
-material = SubResource("ORMMaterial3D_5a7ea")
+[sub_resource type="SpriteFrames" id="SpriteFrames_ul62n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_e8nqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_iv6t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wcc8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cj6kn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_a7kkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_i7lqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bsqrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4siar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_570qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hbacd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_26dxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_82eqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5wkg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rkkcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fgwf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_b3i0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5euyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_mcqc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_4guts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_laq40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_y5l5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1nh4h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u600h"]
 size = Vector3(3.1035156, 3.3394241, 2.8497086)
@@ -72,16 +163,18 @@ shaded = true
 sprite_frames = SubResource("SpriteFrames_yv2xv")
 
 [node name="Spirit" type="Node3D" parent="Head/Camera3D" unique_id=1957678263]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5084522, 0.0381971, -0.36067855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49642855, 0.0381971, -0.36067855)
 script = ExtResource("3_iulrt")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D/Spirit" unique_id=1599315806]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.043509007, -0.38714612)
-mesh = SubResource("SphereMesh_go701")
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Head/Camera3D/Spirit" unique_id=1960998135]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0.07613397, -0.388808)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_ul62n")
 
-[node name="Lights" type="Node3D" parent="Head/Camera3D/Spirit/MeshInstance3D" unique_id=74992989]
+[node name="Lights" type="Node3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D" unique_id=74992989]
+transform = Transform3D(2.5000002, 0, 0, 0, 2.5000002, 0, 0, 0, 2.5000002, 0, -1.99405, 0.027698517)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1934625501]
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D/Lights" unique_id=1934625501]
 transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, 0, -0.98404455)
 light_energy = 0.15
 light_size = 0.238
@@ -90,7 +183,7 @@ shadow_bias = 1.684
 shadow_blur = 2.782
 distance_fade_begin = 7.0
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1866628453]
+[node name="OmniLight3D2" type="OmniLight3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D/Lights" unique_id=1866628453]
 transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 1.037822, 0, 0)
 light_energy = 0.15
 light_size = 0.238
@@ -99,7 +192,7 @@ shadow_bias = 1.684
 shadow_blur = 2.782
 distance_fade_begin = 7.0
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1704010515]
+[node name="OmniLight3D3" type="OmniLight3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D/Lights" unique_id=1704010515]
 transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, 0, 0.9924638)
 light_energy = 0.15
 light_size = 0.238
@@ -108,7 +201,7 @@ shadow_bias = 1.684
 shadow_blur = 2.782
 distance_fade_begin = 7.0
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1193744370]
+[node name="OmniLight3D4" type="OmniLight3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D/Lights" unique_id=1193744370]
 transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, -1.3239602, 0, 0)
 light_energy = 0.15
 light_size = 0.238
@@ -117,7 +210,7 @@ shadow_bias = 1.684
 shadow_blur = 2.782
 distance_fade_begin = 7.0
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=1026681635]
+[node name="OmniLight3D5" type="OmniLight3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D/Lights" unique_id=1026681635]
 transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, 1.1107683, 0)
 light_energy = 0.15
 light_size = 0.238
@@ -126,7 +219,7 @@ shadow_bias = 1.684
 shadow_blur = 2.782
 distance_fade_begin = 7.0
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Lights" unique_id=124518846]
+[node name="OmniLight3D6" type="OmniLight3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D/Lights" unique_id=124518846]
 transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, -1.12064, 0)
 light_energy = 0.15
 light_size = 0.238
@@ -135,9 +228,10 @@ shadow_bias = 1.684
 shadow_blur = 2.782
 distance_fade_begin = 7.0
 
-[node name="Area3D" type="Area3D" parent="Head/Camera3D/Spirit/MeshInstance3D" unique_id=517854232]
+[node name="Area3D" type="Area3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D" unique_id=517854232]
+transform = Transform3D(2.5000002, 0, 0, 0, 2.5000002, 0, 0, 0, 2.5000002, 0, -1.99405, 0.027698517)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/Spirit/MeshInstance3D/Area3D" unique_id=452357604]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D/Area3D" unique_id=452357604]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.20898461, 0.12868214, 0.035801888)
 shape = SubResource("BoxShape3D_u600h")
 

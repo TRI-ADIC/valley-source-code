@@ -8,6 +8,7 @@ var is_lit = false
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if !%Flame.visible:
 		%Flame.visible = true
+		%Flame.play("default")
 	
 	if is_lit == false:
 		is_lit = true

@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var viewmodel = $"."
-@onready var viewmodel_mesh = $MeshInstance3D
+@onready var viewmodel_mesh = $AnimatedSprite3D
 @onready var raycast = $"../RayCast3D"
 
 # Delay variables
@@ -19,6 +19,7 @@ var send_position
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_float_object_up()
+	viewmodel_mesh.play("default")
 	default_rotation = viewmodel.rotation
 	default_position = viewmodel_mesh.position
 
