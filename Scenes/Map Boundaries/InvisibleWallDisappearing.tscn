@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://63xm31rp4umx"]
+
+[ext_resource type="Script" uid="uid://6fandrumdcbi" path="res://Scripts/Map Boundaries/invisible_wall_disappearing.gd" id="1_jkj6p"]
+
+[node name="InvisibleWallDisappearing" type="Node3D" unique_id=1128943826]
+script = ExtResource("1_jkj6p")
+
+[node name="Wall" type="CSGBox3D" parent="." unique_id=1333856119]
+unique_name_in_owner = true
+visible = false
+use_collision = true

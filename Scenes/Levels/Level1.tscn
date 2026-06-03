@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://d2s4qlq0neb3n" path="res://Scenes/Trees/Tree2.tscn" id="9_f3nwb"]
 [ext_resource type="PackedScene" uid="uid://d6dkamwqldpx" path="res://Scenes/Trees/Tree1.tscn" id="9_jcebb"]
 [ext_resource type="PackedScene" uid="uid://bisaq1snjohps" path="res://Scenes/Trees/Tree3.tscn" id="10_f3nwb"]
+[ext_resource type="PackedScene" uid="uid://cpnwm6y1uy8er" path="res://Scenes/Map Boundaries/InvisibleWall.tscn" id="12_n5ptj"]
+[ext_resource type="PackedScene" uid="uid://63xm31rp4umx" path="res://Scenes/Map Boundaries/InvisibleWallDisappearing.tscn" id="13_77iba"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riv1q"]
 albedo_texture = ExtResource("2_36ke7")
@@ -540,7 +542,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.364138, -1.7462306, -3.152
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.562572, -1.7462287, -2.738554)
 
 [node name="Tree95" parent="Level/Trees" unique_id=1077917991 instance=ExtResource("9_jcebb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.506878, -1.7462306, -1.864788)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.974026, -1.7462306, -5.1937943)
 
 [node name="Tree96" parent="Level/Trees" unique_id=1141469806 instance=ExtResource("9_jcebb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.793533, -1.7462306, -19.079138)
@@ -592,3 +594,19 @@ transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 24.697395, -1.
 
 [node name="Tree112" parent="Level/Trees" unique_id=1696455922 instance=ExtResource("9_f3nwb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.091242, -1.2037919, -95.0428)
+
+[node name="Map Boundaries" type="Node3D" parent="Level" unique_id=1754393613]
+
+[node name="InvisibleWall" parent="Level/Map Boundaries" unique_id=1128943826 instance=ExtResource("12_n5ptj")]
+transform = Transform3D(42.37249, 0, 0, 0, 31.310377, 0, 0, 0, 26.318855, 27.673176, -10.16611, -118.68256)
+
+[node name="InvisibleWall2" parent="Level/Map Boundaries" unique_id=440672227 instance=ExtResource("12_n5ptj")]
+transform = Transform3D(42.37249, 0, 0, 0, 31.310377, 0, 0, 0, 26.318855, -19.094486, -10.16611, -118.68256)
+
+[node name="InvisibleWallDisappearing" parent="Level/Map Boundaries" unique_id=960956524 node_paths=PackedStringArray("open_with_flames") instance=ExtResource("13_77iba")]
+transform = Transform3D(2.8284645, 0, 0, 0, 5.0034394, 0, 0, 0, 1, 3.7735798, 0.73793375, -105.90286)
+open_with_flames = {
+NodePath("../../Structures/Unlit Cauldrons/CauldronUnlit"): true,
+NodePath("../../Structures/Unlit Cauldrons/CauldronUnlit2"): true,
+NodePath("../../Structures/Unlit Cauldrons/CauldronUnlit3"): true
+}
