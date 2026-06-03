@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://op1pysbmw3kg"]
 
-[ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/Player/AnthroCat.tscn" id="1_5jgm0"]
 [ext_resource type="Texture2D" uid="uid://cf816xcjfa16x" path="res://Textures/Valley/Grass.png" id="2_36ke7"]
 [ext_resource type="Texture2D" uid="uid://cxb553kql3lit" path="res://Textures/Valley/Dirt.png" id="3_riv1q"]
 [ext_resource type="PackedScene" uid="uid://0iqhtf01u3gg" path="res://Scenes/Rocks/Rock1.tscn" id="4_8h4de"]
@@ -49,37 +48,16 @@ albedo_color = Color(0.20082003, 0.13206491, 0.22104996, 1)
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_kp1yh"]
 albedo_color = Color(0.20082003, 0.13206491, 0.22104996, 1)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_57lp3"]
-sky_top_color = Color(0.10571615, 6.545782e-06, 0.4761901, 1)
-sky_horizon_color = Color(0, 0, 0, 1)
-sky_curve = 3.3940845
-ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Sky" id="Sky_fj7yv"]
-sky_material = SubResource("ProceduralSkyMaterial_57lp3")
-
-[sub_resource type="Environment" id="Environment_n5ptj"]
-background_mode = 2
-sky = SubResource("Sky_fj7yv")
-ambient_light_energy = 0.0
-tonemap_mode = 2
-glow_enabled = true
-glow_intensity = 0.01
-glow_strength = 1.25
-
 [node name="Level1" type="Node3D" unique_id=1404524287]
-
-[node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("1_5jgm0")]
 
 [node name="Level" type="Node3D" parent="." unique_id=1447044637]
 
 [node name="Valley" type="Node3D" parent="Level" unique_id=1918762237]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Level/Valley" unique_id=2025591242]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.074768, -1.7494425, -52.7937)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.074768, -59.88311, -52.7937)
 use_collision = true
-size = Vector3(96.973755, 1, 106.5874)
+size = Vector3(96.973755, 117.267334, 106.5874)
 material = SubResource("StandardMaterial3D_riv1q")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Level/Valley" unique_id=158325929]
@@ -614,11 +592,3 @@ transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 24.697395, -1.
 
 [node name="Tree112" parent="Level/Trees" unique_id=1696455922 instance=ExtResource("9_f3nwb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.091242, -1.2037919, -95.0428)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1177413217]
-environment = SubResource("Environment_n5ptj")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=39928057]
-transform = Transform3D(-0.86602545, -0.06553995, -0.49568596, 0.022986611, -0.9955424, 0.09147083, -0.49947143, 0.06782192, 0.8636716, 0, 0, 0)
-visible = false
-shadow_enabled = true
