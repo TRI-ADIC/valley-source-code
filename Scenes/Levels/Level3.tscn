@@ -342,10 +342,10 @@ material = SubResource("StandardMaterial3D_5oy68")
 [node name="Lit Cauldrons" type="Node3D" parent="Level/Structures" unique_id=424509732]
 
 [node name="CauldronLit" parent="Level/Structures/Lit Cauldrons" unique_id=1241995679 instance=ExtResource("3_5oy68")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.927187, -52.362072, -112.37705)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.927187, -53.357033, -112.37705)
 
 [node name="CauldronLit2" parent="Level/Structures/Lit Cauldrons" unique_id=903773662 instance=ExtResource("3_5oy68")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.005259, -52.362072, -112.37705)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.005259, -53.357033, -112.37705)
 
 [node name="CauldronLit3" parent="Level/Structures/Lit Cauldrons" unique_id=1671853910 instance=ExtResource("3_5oy68")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.005259, -42.733837, -116.752945)
