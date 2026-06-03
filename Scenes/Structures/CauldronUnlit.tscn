@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnfqjo0hfs7x5"]
 
-[ext_resource type="Script" uid="uid://c28atu0righcw" path="res://Scripts/Structures/cauldron.gd" id="1_kp1yh"]
+[ext_resource type="Script" uid="uid://c28atu0righcw" path="res://Scripts/Structures/unlitcauldron.gd" id="1_kp1yh"]
 [ext_resource type="Texture2D" uid="uid://cym6pq0mkagvs" path="res://Animations/Flame/frame0000.png" id="2_eqfj8"]
 [ext_resource type="Texture2D" uid="uid://ciw6k2xfnx7eu" path="res://Animations/Flame/frame0001.png" id="3_lpw6k"]
 [ext_resource type="Texture2D" uid="uid://c07evmgn66ke5" path="res://Animations/Flame/frame0002.png" id="4_m5cnb"]

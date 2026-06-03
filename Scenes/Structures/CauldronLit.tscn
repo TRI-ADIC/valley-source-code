@@ -1,12 +1,105 @@
 [gd_scene format=3 uid="uid://bnxdinvs57p5f"]
 
-[ext_resource type="Script" uid="uid://c28atu0righcw" path="res://Scripts/Structures/cauldron.gd" id="1_6p1n5"]
+[ext_resource type="Script" uid="uid://cv21p4u0cetj5" path="res://Scripts/Structures/litcauldron.gd" id="1_6p1n5"]
+[ext_resource type="Texture2D" uid="uid://cym6pq0mkagvs" path="res://Animations/Flame/frame0000.png" id="2_4lv7k"]
+[ext_resource type="Texture2D" uid="uid://ciw6k2xfnx7eu" path="res://Animations/Flame/frame0001.png" id="3_xjq3g"]
+[ext_resource type="Texture2D" uid="uid://c07evmgn66ke5" path="res://Animations/Flame/frame0002.png" id="4_ishdp"]
+[ext_resource type="Texture2D" uid="uid://2v6u6j3h40xp" path="res://Animations/Flame/frame0003.png" id="5_ribag"]
+[ext_resource type="Texture2D" uid="uid://c0bqo8u4wluuu" path="res://Animations/Flame/frame0004.png" id="6_ws3vq"]
+[ext_resource type="Texture2D" uid="uid://conu0nsot588h" path="res://Animations/Flame/frame0005.png" id="7_kquix"]
+[ext_resource type="Texture2D" uid="uid://bqstle50p1pcm" path="res://Animations/Flame/frame0006.png" id="8_4e3d2"]
+[ext_resource type="Texture2D" uid="uid://bbn5vv28sx1ui" path="res://Animations/Flame/frame0007.png" id="9_iefw1"]
+[ext_resource type="Texture2D" uid="uid://cmh0ssw8urgo8" path="res://Animations/Flame/frame0008.png" id="10_vfweg"]
+[ext_resource type="Texture2D" uid="uid://qxjflgvfw5gb" path="res://Animations/Flame/frame0009.png" id="11_x737p"]
+[ext_resource type="Texture2D" uid="uid://c44138736wh4h" path="res://Animations/Flame/frame0010.png" id="12_ylcxv"]
+[ext_resource type="Texture2D" uid="uid://ddwo1f8kkn4kl" path="res://Animations/Flame/frame0011.png" id="13_p6j35"]
+[ext_resource type="Texture2D" uid="uid://cxrn4kmncs0of" path="res://Animations/Flame/frame0012.png" id="14_ipt4g"]
+[ext_resource type="Texture2D" uid="uid://cqvnwo1rpp7k6" path="res://Animations/Flame/frame0013.png" id="15_bpx0b"]
+[ext_resource type="Texture2D" uid="uid://dg4nnpukasbum" path="res://Animations/Flame/frame0014.png" id="16_fn4v5"]
+[ext_resource type="Texture2D" uid="uid://drnaa58xo7jdg" path="res://Animations/Flame/frame0015.png" id="17_wk3f8"]
+[ext_resource type="Texture2D" uid="uid://hbopnukusk1t" path="res://Animations/Flame/frame0016.png" id="18_rt4kx"]
+[ext_resource type="Texture2D" uid="uid://dm7wuhtqr8emo" path="res://Animations/Flame/frame0017.png" id="19_51o2u"]
+[ext_resource type="Texture2D" uid="uid://s8flbmhfyp6i" path="res://Animations/Flame/frame0018.png" id="20_3xaqs"]
+[ext_resource type="Texture2D" uid="uid://jryuwg3r5r35" path="res://Animations/Flame/frame0019.png" id="21_wm5bi"]
+[ext_resource type="Texture2D" uid="uid://pxq1xkb5yvyh" path="res://Animations/Flame/frame0020.png" id="22_v8vvj"]
+[ext_resource type="Texture2D" uid="uid://crex0rpu5lta0" path="res://Animations/Flame/frame0021.png" id="23_xjnb5"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_kp1yh"]
 albedo_color = Color(0.20082003, 0.13206491, 0.22104996, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_06nqu"]
-size = Vector3(1.1142578, 1.9800568, 1.1252441)
+[sub_resource type="SpriteFrames" id="SpriteFrames_renqu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4lv7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xjq3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ishdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ribag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ws3vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kquix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4e3d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iefw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vfweg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x737p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ylcxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_p6j35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ipt4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bpx0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fn4v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wk3f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rt4kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_51o2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_3xaqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wm5bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_v8vvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_xjnb5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
 
 [node name="CauldronLit" type="Node3D" unique_id=1241995679]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
@@ -33,36 +126,30 @@ radius = 0.10107422
 height = 1.0259626
 material = SubResource("ORMMaterial3D_kp1yh")
 
-[node name="Area3D" type="Area3D" parent="CSGCylinder3D2" unique_id=1999881999]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCylinder3D2/Area3D" unique_id=1811027773]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008300781, 0.40676117, -0.003540039)
-shape = SubResource("BoxShape3D_06nqu")
-
-[node name="Flame" type="CSGSphere3D" parent="." unique_id=1856525546]
+[node name="Flame" type="AnimatedSprite3D" parent="." unique_id=971655229]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3611182, 0)
-radius = 0.34203532
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 1.8805485, -0.00026202202)
+flip_h = true
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_renqu")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Flame" unique_id=505672031]
-transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, 0.031706415, 0.6086364, 0)
+[node name="OmniLight3D" type="OmniLight3D" parent="Flame" unique_id=1694914053]
+transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, 0.12682566, 0.64328766, 0.0010480881)
 light_size = 1.0
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Flame" unique_id=1159494346]
-transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, -0.6001736, -0.010332227, 0)
+[node name="OmniLight3D2" type="OmniLight3D" parent="Flame" unique_id=2127588563]
+transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, -2.4006944, -1.8325868, 0.0010480881)
 light_size = 1.0
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Flame" unique_id=1729316878]
-transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, 0.0711122, -0.010332227, 0.82852256)
+[node name="OmniLight3D3" type="OmniLight3D" parent="Flame" unique_id=18791088]
+transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, 0.2844488, -1.8325868, 3.3151383)
 light_size = 1.0
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="Flame" unique_id=2022582788]
-transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, 0.8455691, -0.010332227, -0.009792646)
+[node name="OmniLight3D4" type="OmniLight3D" parent="Flame" unique_id=1541400214]
+transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, 3.3822763, -1.8325868, -0.038122497)
 light_size = 1.0
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="Flame" unique_id=1641020164]
-transform = Transform3D(0.33333334, 0, 0, 0, 0.33333334, 0, 0, 0, 0.33333334, 0.0720559, -0.010332227, -0.8841672)
+[node name="OmniLight3D5" type="OmniLight3D" parent="Flame" unique_id=1642783813]
+transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, 0.2882236, -1.8325868, -3.5356207)
 light_size = 1.0
 omni_range = 4.80314
-
-[connection signal="area_entered" from="CSGCylinder3D2/Area3D" to="." method="_on_area_3d_area_entered"]
