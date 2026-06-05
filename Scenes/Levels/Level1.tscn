@@ -334,9 +334,6 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 6.988352, -1.7462287, -
 [node name="Tree25" parent="Level/Trees" unique_id=217626480 instance=ExtResource("9_f3nwb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.013725, -1.5729301, -87.203415)
 
-[node name="Tree26" parent="Level/Trees" unique_id=2046066495 instance=ExtResource("10_f3nwb")]
-transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 32.888554, -1.4053621, -103.201614)
-
 [node name="Tree27" parent="Level/Trees" unique_id=843706345 instance=ExtResource("9_f3nwb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.601707, -1.572932, -82.88485)
 
@@ -598,10 +595,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.091242, -1.2037919, -95.04
 [node name="Map Boundaries" type="Node3D" parent="Level" unique_id=1754393613]
 
 [node name="InvisibleWall" parent="Level/Map Boundaries" unique_id=1128943826 instance=ExtResource("12_n5ptj")]
-transform = Transform3D(42.37249, 0, 0, 0, 31.310377, 0, 0, 0, 26.318855, 27.673176, -10.16611, -118.68256)
+transform = Transform3D(42.37249, 0, 0, 0, 31.310377, 0, 0, 0, 28.544456, 27.673176, -10.16611, -119.63103)
 
 [node name="InvisibleWall2" parent="Level/Map Boundaries" unique_id=440672227 instance=ExtResource("12_n5ptj")]
-transform = Transform3D(42.37249, 0, 0, 0, 31.310377, 0, 0, 0, 26.318855, -19.094486, -10.16611, -118.68256)
+transform = Transform3D(42.37249, 0, 0, 0, 31.310377, 0, 0, 0, 28.282942, -19.094486, -10.16611, -119.49119)
 
 [node name="InvisibleWallDisappearing" parent="Level/Map Boundaries" unique_id=960956524 node_paths=PackedStringArray("open_with_flames") instance=ExtResource("13_77iba")]
 transform = Transform3D(2.8284645, 0, 0, 0, 5.0034394, 0, 0, 0, 1, 3.7735798, 0.73793375, -105.90286)

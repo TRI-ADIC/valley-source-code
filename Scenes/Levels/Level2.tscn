@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://b4j8hambfn2n8"]
 
-[ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/Player/AnthroCat.tscn" id="1_0ryud"]
 [ext_resource type="Texture2D" uid="uid://dpa3e3c216eec" path="res://Textures/Valley/Stone.png" id="2_m40gi"]
 [ext_resource type="Texture2D" uid="uid://cxb553kql3lit" path="res://Textures/Valley/Dirt.png" id="2_svn12"]
 [ext_resource type="PackedScene" uid="uid://drwjdrqevlnrl" path="res://Scenes/Statues/StMonica.tscn" id="4_smuj1"]
@@ -9,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cr38nu4ixt87j" path="res://Scenes/Rocks/Rock2.tscn" id="7_d1swa"]
 [ext_resource type="PackedScene" uid="uid://w25dl7d7cebn" path="res://Scenes/Rocks/Rock3.tscn" id="8_ipaot"]
 [ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Bridge.tscn" id="9_d1swa"]
+[ext_resource type="PackedScene" uid="uid://cpnwm6y1uy8er" path="res://Scenes/Map Boundaries/InvisibleWall.tscn" id="9_ipaot"]
+[ext_resource type="PackedScene" uid="uid://63xm31rp4umx" path="res://Scenes/Map Boundaries/InvisibleWallDisappearing.tscn" id="10_ipaot"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smuj1"]
 albedo_texture = ExtResource("2_svn12")
@@ -38,105 +39,84 @@ uv1_triplanar = true
 albedo_texture = ExtResource("2_m40gi")
 uv1_triplanar = true
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_57lp3"]
-sky_top_color = Color(0.10571615, 6.545782e-06, 0.4761901, 1)
-sky_horizon_color = Color(0, 0, 0, 1)
-sky_curve = 3.3940845
-ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Sky" id="Sky_fj7yv"]
-sky_material = SubResource("ProceduralSkyMaterial_57lp3")
-
-[sub_resource type="Environment" id="Environment_n5ptj"]
-background_mode = 2
-sky = SubResource("Sky_fj7yv")
-ambient_light_energy = 0.0
-tonemap_mode = 2
-glow_enabled = true
-glow_intensity = 0.01
-glow_strength = 1.25
-
 [node name="Level2" type="Node3D" unique_id=487716865]
-
-[node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("1_0ryud")]
 
 [node name="Level" type="Node3D" parent="." unique_id=857611902]
 
 [node name="Valley" type="Node3D" parent="Level" unique_id=1785767926]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Level/Valley" unique_id=1133460597]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.073601, -9.225627, -41.615143)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.073601, -79.87284, -41.615143)
 use_collision = true
-size = Vector3(107.40575, 15.832031, 84.230286)
+size = Vector3(107.40575, 157.12646, 84.230286)
 material = SubResource("StandardMaterial3D_smuj1")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Level/Valley/CSGBox3D" unique_id=1316648243]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.040659, 1.8538513, -12.7862015)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.040659, 72.50107, -12.7862015)
 operation = 2
 radius = 7.063965
 height = 14.229553
 material = SubResource("StandardMaterial3D_5iseo")
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Level/Valley/CSGBox3D" unique_id=2096243908]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 26.040659, -2.6610727, -37.45526)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 26.040659, 67.986145, -37.45526)
 operation = 2
 radius = 4.283203
 height = 5.7262044
 material = SubResource("StandardMaterial3D_5iseo")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Level/Valley/CSGBox3D" unique_id=404850146]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.05745, -3.122612, -26.6408)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.05745, 67.524605, -26.6408)
 operation = 2
 size = Vector3(4.090454, 4.4265137, 15.307617)
 material = SubResource("StandardMaterial3D_4rk67")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Level/Valley" unique_id=238428099]
-transform = Transform3D(0.9677356, 0, 0.25196803, 0, 1, 0, -0.25196803, 0, 0.9677356, -1.8416996, 149.20027, -47.34932)
+transform = Transform3D(0.9677356, 0, 0.25196803, 0, 1, 0, -0.25196803, 0, 0.9677356, -1.8416996, 740.6586, -47.34932)
 use_collision = true
-size = Vector3(10.748291, 303.0198, 58.4653)
+size = Vector3(10.748291, 1485.9365, 58.4653)
 material = SubResource("StandardMaterial3D_svn12")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Level/Valley" unique_id=452605693]
-transform = Transform3D(0.99268377, 0, -0.120743275, 0, 1, 0, 0.120743275, 0, 0.99268377, 32.26324, 75.17603, -34.153057)
+transform = Transform3D(0.99268377, 0, -0.120743275, 0, 1, 0, 0.120743275, 0, 0.99268377, 32.26324, 736.5582, -34.153057)
 use_collision = true
-size = Vector3(18.773071, 154.97133, 86.02843)
+size = Vector3(18.773071, 1477.7358, 86.02843)
 material = SubResource("StandardMaterial3D_svn12")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="Level/Valley" unique_id=1649083720]
-transform = Transform3D(0.35650963, 0, -0.93429166, 0, 1, 0, 0.93429166, 0, 0.35650963, 30.242731, 149.20027, -82.76583)
+transform = Transform3D(0.35650963, 0, -0.93429166, 0, 1, 0, 0.93429166, 0, 0.35650963, 30.242731, 726.9334, -82.76583)
 use_collision = true
-size = Vector3(18.773071, 303.0198, 90.35365)
+size = Vector3(18.773071, 1458.4861, 90.35365)
 material = SubResource("StandardMaterial3D_svn12")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Level/Valley" unique_id=383109660]
-transform = Transform3D(0.9606387, 0, -0.27780092, 0, 1, 0, 0.27780092, 0, 0.9606387, -38.786636, 169.35873, -17.173687)
+transform = Transform3D(0.9606387, 0, -0.27780092, 0, 1, 0, 0.27780092, 0, 0.9606387, -38.786636, 741.2058, -17.173687)
 use_collision = true
-size = Vector3(6.750122, 343.33673, 47.661797)
+size = Vector3(6.750122, 1487.0308, 47.661797)
 material = SubResource("StandardMaterial3D_svn12")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Level/Valley" unique_id=2004158514]
-transform = Transform3D(0.92153126, 0, 0.38830376, 0, 1, 0, -0.38830376, 0, 0.92153126, -57.020554, 153.4474, -17.173687)
+transform = Transform3D(0.92153126, 0, 0.38830376, 0, 1, 0, -0.38830376, 0, 0.92153126, -57.020554, 719.46387, -17.173687)
 use_collision = true
-size = Vector3(6.750122, 311.51407, 47.661797)
+size = Vector3(6.750122, 1443.5469, 47.661797)
 material = SubResource("StandardMaterial3D_svn12")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Level/Valley" unique_id=1314615055]
-transform = Transform3D(0.96093386, 0, -0.27677804, 0, 1, 0, 0.27677804, 0, 0.96093386, -68.01274, 169.35873, -41.74696)
+transform = Transform3D(0.96093386, 0, -0.27677804, 0, 1, 0, 0.27677804, 0, 0.96093386, -68.01274, 730.03394, -41.74696)
 use_collision = true
-size = Vector3(6.750122, 343.33673, 47.661797)
+size = Vector3(6.750122, 1464.687, 47.661797)
 material = SubResource("StandardMaterial3D_svn12")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Level/Valley" unique_id=1231164327]
-transform = Transform3D(0.3288996, 0, -0.9443649, 0, 1, 0, 0.9443649, 0, 0.3288996, -48.49638, 150.63399, -63.831715)
+transform = Transform3D(0.3288996, 0, -0.9443649, 0, 1, 0, 0.9443649, 0, 0.3288996, -48.49638, 732.8076, -63.831715)
 use_collision = true
-size = Vector3(4.1660767, 305.88724, 59.59799)
+size = Vector3(4.1660767, 1470.2345, 59.59799)
 material = SubResource("StandardMaterial3D_svn12")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Level/Valley" unique_id=1650652716]
-transform = Transform3D(0.83009017, 0, -0.5576292, 0, 1, 0, 0.5576292, 0, 0.83009017, -30.887913, 197.36024, -59.104435)
+transform = Transform3D(0.83009017, 0, -0.5576292, 0, 1, 0, 0.5576292, 0, 0.83009017, -30.887913, 740.86084, -59.104435)
 use_collision = true
-size = Vector3(10.748291, 399.33975, 23.675564)
+size = Vector3(10.748291, 1486.3411, 23.675564)
 material = SubResource("StandardMaterial3D_svn12")
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Level/Valley" unique_id=244070373]
@@ -389,10 +369,17 @@ NodePath("../Cauldrons/CauldronUnlit"): true,
 NodePath("../Cauldrons/CauldronUnlit2"): true
 }
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1983576999]
-environment = SubResource("Environment_n5ptj")
+[node name="Map Boundaries" type="Node3D" parent="Level" unique_id=1383719021]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1310292810]
-transform = Transform3D(-0.86602545, -0.06553995, -0.49568596, 0.022986611, -0.9955424, 0.09147083, -0.49947143, 0.06782192, 0.8636716, 0, 0, 0)
-visible = false
-shadow_enabled = true
+[node name="InvisibleWall" parent="Level/Map Boundaries" unique_id=1128943826 instance=ExtResource("9_ipaot")]
+transform = Transform3D(16.202291, 0, 0, 0, 30.360628, 0, 0, 0, 28.132454, -27.422268, -12.765039, -96.65842)
+
+[node name="InvisibleWall2" parent="Level/Map Boundaries" unique_id=1113546532 instance=ExtResource("9_ipaot")]
+transform = Transform3D(16.202291, 0, 0, 0, 30.360628, 0, 0, 0, 28.132454, -8.020706, -12.765039, -96.65842)
+
+[node name="InvisibleWallDisappearing" parent="Level/Map Boundaries" unique_id=1300339152 node_paths=PackedStringArray("open_with_flames") instance=ExtResource("10_ipaot")]
+transform = Transform3D(3.5635083, 0, 0, 0, 7.0141416, 0, 0, 0, 1, -17.850765, -0.9502778, -83.1989)
+open_with_flames = {
+NodePath("../../Structures/Cauldrons/CauldronUnlit"): true,
+NodePath("../../Structures/Cauldrons/CauldronUnlit2"): true
+}

@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://dail75ruid2e1"]
 
 [ext_resource type="PackedScene" uid="uid://op1pysbmw3kg" path="res://Scenes/Levels/Level1.tscn" id="1_0nbjp"]
+[ext_resource type="PackedScene" uid="uid://b4j8hambfn2n8" path="res://Scenes/Levels/Level2.tscn" id="2_p7pgw"]
 [ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Bridge.tscn" id="2_xf6vi"]
 [ext_resource type="PackedScene" uid="uid://bnfqjo0hfs7x5" path="res://Scenes/Structures/CauldronUnlit.tscn" id="3_27jhl"]
+[ext_resource type="PackedScene" uid="uid://dusjnr17xobst" path="res://Scenes/Levels/Level3.tscn" id="3_ng1ea"]
 [ext_resource type="Texture2D" uid="uid://cf816xcjfa16x" path="res://Textures/Valley/Grass.png" id="3_ouhkt"]
 [ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/Player/AnthroCat.tscn" id="4_5jr8x"]
 [ext_resource type="Texture2D" uid="uid://cxb553kql3lit" path="res://Textures/Valley/Dirt.png" id="5_hveh7"]
 [ext_resource type="PackedScene" uid="uid://cpnwm6y1uy8er" path="res://Scenes/Map Boundaries/InvisibleWall.tscn" id="6_kjd5s"]
+[ext_resource type="Texture2D" uid="uid://bm4sh8dwl2ucj" path="res://Textures/Valley/DarkStone.png" id="7_0d0er"]
+[ext_resource type="Texture2D" uid="uid://dpa3e3c216eec" path="res://Textures/Valley/Stone.png" id="7_kuxid"]
 [ext_resource type="PackedScene" uid="uid://63xm31rp4umx" path="res://Scenes/Map Boundaries/InvisibleWallDisappearing.tscn" id="7_p7pgw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ouhkt"]
@@ -28,6 +32,25 @@ glow_enabled = true
 glow_intensity = 0.01
 glow_strength = 1.25
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_57lp3"]
+sky_top_color = Color(0.312699, 1.2032687e-07, 0.10212644, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_curve = 0.001093388
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_ng1ea"]
+sky_material = SubResource("ProceduralSkyMaterial_57lp3")
+
+[sub_resource type="Environment" id="Environment_n5ptj"]
+background_mode = 2
+sky = SubResource("Sky_ng1ea")
+ambient_light_energy = 0.0
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 0.01
+glow_strength = 1.25
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5jr8x"]
 albedo_texture = ExtResource("3_ouhkt")
 uv1_triplanar = true
@@ -36,14 +59,40 @@ uv1_triplanar = true
 albedo_texture = ExtResource("5_hveh7")
 uv1_triplanar = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7pgw"]
+albedo_texture = ExtResource("5_hveh7")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0d0er"]
+albedo_texture = ExtResource("7_kuxid")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kuxid"]
+albedo_texture = ExtResource("3_ouhkt")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ng1ea"]
+albedo_texture = ExtResource("5_hveh7")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x5sp8"]
+albedo_texture = ExtResource("7_0d0er")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lp0bp"]
+albedo_texture = ExtResource("7_kuxid")
+uv1_triplanar = true
+
 [node name="World" type="Node3D" unique_id=677842979]
 
-[node name="Levels" type="Node3D" parent="." unique_id=1537864358]
-
-[node name="Level1" parent="Levels" unique_id=1404524287 instance=ExtResource("1_0nbjp")]
+[node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("4_5jr8x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3032333, 15.123308, 68.0252)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1756013573]
 environment = SubResource("Environment_5jr8x")
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=194304256]
+environment = SubResource("Environment_n5ptj")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=106925058]
 transform = Transform3D(-0.86602545, -0.06553995, -0.49568596, 0.022986611, -0.9955424, 0.09147083, -0.49947143, 0.06782192, 0.8636716, 0, 0, 0)
@@ -71,107 +120,407 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.8053944, -1.0186882, 32.99
 
 [node name="Valley" type="Node3D" parent="Environment" unique_id=459906001]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Environment/Valley" unique_id=931138131]
+[node name="Starting Area" type="Node3D" parent="Environment/Valley" unique_id=1018758497]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=931138131]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0566807, -55.052055, 37.37585)
 use_collision = true
 size = Vector3(31.519867, 107.77832, 23.501404)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="Environment/Valley" unique_id=1321351480]
+[node name="CSGBox3D13" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1321351480]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.434816, -95.92773, 12.658333)
 use_collision = true
 size = Vector3(85.45565, 26.026978, 40.332817)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="Environment/Valley" unique_id=1206374552]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1206374552]
 transform = Transform3D(0.95305866, 0, -0.30278575, 0, 1, 0, 0.30278575, 0, 0.95305866, -2.3499851, 0.53555965, 47.83669)
 use_collision = true
 size = Vector3(12.035919, 5.3969116, 6.923874)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="Environment/Valley" unique_id=1728988404]
+[node name="CSGBox3D4" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1728988404]
 transform = Transform3D(0.998029, 0, 0.062755704, 0, 1, 0, -0.062755704, 0, 0.998029, 0.44673055, 1.1629529, 52.698196)
 use_collision = true
 size = Vector3(27.371372, 9.306198, 8.613792)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="Environment/Valley" unique_id=2025796327]
+[node name="CSGBox3D5" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=2025796327]
 transform = Transform3D(0.9870637, 0, -0.16032912, 0, 1, 0, 0.16032912, 0, 0.9870637, -1.3634815, 7.296391, 66.12895)
 use_collision = true
 size = Vector3(29.67885, 11.054611, 25.922125)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="Environment/Valley" unique_id=1541101177]
+[node name="CSGBox3D6" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1541101177]
 transform = Transform3D(0.98620486, 0, 0.1655296, 0, 1, 0, -0.1655296, 0, 0.98620486, 6.9686246, 14.068789, 81.956116)
 use_collision = true
 size = Vector3(16.912632, 24.599407, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D14" type="CSGBox3D" parent="Environment/Valley" unique_id=1174110856]
+[node name="CSGBox3D14" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1174110856]
 transform = Transform3D(0.98620486, 0, 0.1655296, 0, 1, 0, -0.1655296, 0, 0.98620486, 11.744041, 65.56865, 165.67874)
 use_collision = true
 size = Vector3(26.597063, 127.59914, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="Environment/Valley" unique_id=675231215]
+[node name="CSGBox3D15" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=675231215]
 transform = Transform3D(0.86572856, 0, -0.5005138, 0, 1, 0, 0.5005138, 0, 0.86572856, -18.204546, 65.56865, 164.47458)
 use_collision = true
 size = Vector3(46.46372, 127.59914, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="Environment/Valley" unique_id=1776503726]
+[node name="CSGBox3D16" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1776503726]
 transform = Transform3D(1.8452646, 0, 0.189731, 0, 1, 0, -0.30971852, 0, 1.1303939, 24.969341, 337.43115, 537.525)
 use_collision = true
 size = Vector3(26.597063, 367.98425, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D17" type="CSGBox3D" parent="Environment/Valley" unique_id=294216858]
+[node name="CSGBox3D17" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=294216858]
 transform = Transform3D(1.5277202, 0, -0.27924448, 0, 1, 0, 0.88323873, 0, 0.48300356, -56.45821, 370.69498, 521.85205)
 use_collision = true
 size = Vector3(79.226974, 433.51483, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Valley" unique_id=251945469]
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=251945469]
 transform = Transform3D(0.99907166, 0, 0.043078832, 0, 1, 0, -0.043078832, 0, 0.99907166, 34.72591, 373.72443, 358.10294)
 use_collision = true
 size = Vector3(21.524675, 917.3901, 678.4635)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Valley" unique_id=2042543640]
+[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=2042543640]
 transform = Transform3D(0.96221316, 0, -0.27229705, 0, 1, 0, 0.27229705, 0, 0.96221316, 35.516197, 391.5603, 27.144041)
 use_collision = true
 size = Vector3(21.524675, 953.06177, 51.370686)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="Environment/Valley" unique_id=1248048629]
+[node name="CSGBox3D11" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1248048629]
 transform = Transform3D(0.9683571, 0, 0.24956882, 0, 1, 0, -0.24956882, 0, 0.9683571, 44.45569, 437.86923, 4.312687)
 use_collision = true
 size = Vector3(16.911898, 1045.6797, 15.273029)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Valley" unique_id=2083845569]
+[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=2083845569]
 transform = Transform3D(0.98456055, 0, -0.1404218, 0, 0.99452394, 0, 0.1404218, 0, 0.98456055, -69.79191, 368.27167, 365.6721)
 use_collision = true
 size = Vector3(22.958504, 965.99426, 696.8939)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="Environment/Valley" unique_id=1167435607]
+[node name="CSGBox3D12" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1167435607]
 transform = Transform3D(0.9810837, 0, 0.1935837, 0, 1, 0, -0.1935837, 0, 0.9810837, -25.663021, 405.48193, 14.504121)
 use_collision = true
 size = Vector3(22.127567, 1040.4148, 31.45176)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Valley" unique_id=113188770]
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=113188770]
 transform = Transform3D(0.8799721, 0, -0.47502524, 0, 1, 0, 0.47502524, 0, 0.8799721, -12.863383, 15.175529, 79.39471)
 use_collision = true
 size = Vector3(21.510027, 26.812887, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="Environment/Valley" unique_id=396613198]
+[node name="CSGBox3D3" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=396613198]
 transform = Transform3D(0.9724514, 0, 0.23310596, 0, 1, 0, -0.23310596, 0, 0.9724514, 4.0653596, 0.73743343, 48.960224)
 use_collision = true
 size = Vector3(12.035919, 5.800659, 8.959984)
 material = SubResource("StandardMaterial3D_5jr8x")
+
+[node name="Level 1 to 2 Transition" type="Node3D" parent="Environment/Valley" unique_id=890016292]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=831137626]
+transform = Transform3D(0.9841492, 0, -0.1773424, 0, 1, 0, 0.1773424, 0, 0.9841492, 20.59585, 483.2798, -127.3577)
+use_collision = true
+size = Vector3(11.084961, 1209.6299, 49.16797)
+material = SubResource("StandardMaterial3D_p7pgw")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=53989019]
+transform = Transform3D(0.8963394, 0, -0.44336855, 0, 1, 0, 0.44336855, 0, 0.8963394, 27.196798, 540.657, -154.78706)
+use_collision = true
+size = Vector3(14.078613, 1324.3843, 24.424072)
+material = SubResource("StandardMaterial3D_p7pgw")
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1279287013]
+transform = Transform3D(0.8802787, 0, -0.47445703, 0, 1, 0, 0.47445703, 0, 0.8802787, 33.350666, 616.2617, -169.5768)
+use_collision = true
+size = Vector3(9.522705, 1475.5938, 18.052734)
+material = SubResource("StandardMaterial3D_0d0er")
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=288230010]
+transform = Transform3D(0.6808742, 0, -0.7324003, 0, 1, 0, 0.7324003, 0, 0.6808742, 38.699947, 622.0093, -177.53421)
+use_collision = true
+size = Vector3(9.522705, 1487.0889, 12.63855)
+material = SubResource("StandardMaterial3D_0d0er")
+
+[node name="CSGBox3D23" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1614351921]
+transform = Transform3D(0.8679388, 0, -0.49667096, 0, 1, 0, 0.49667096, 0, 0.8679388, 53.102684, 622.0975, -164.8877)
+use_collision = true
+size = Vector3(31.20514, 1487.2653, 12.63855)
+material = SubResource("StandardMaterial3D_0d0er")
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=518778777]
+transform = Transform3D(-0.005759567, 0, -0.99998343, 0, 1, 0, 0.99998343, 0, -0.005759567, 18.683292, 630.2744, -188.8866)
+use_collision = true
+size = Vector3(9.522705, 1503.6191, 18.052734)
+material = SubResource("StandardMaterial3D_0d0er")
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=6199589]
+transform = Transform3D(0.3418725, 0, -0.9397463, 0, 1, 0, 0.9397463, 0, 0.3418725, 27.12793, 605.2726, -190.5527)
+use_collision = true
+size = Vector3(9.522705, 1453.6155, 18.052734)
+material = SubResource("StandardMaterial3D_0d0er")
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1059641487]
+transform = Transform3D(0.05610034, 0, -0.9984251, 0, 1, 0, 0.9984251, 0, 0.05610034, 26.909962, 619.298, -205.37013)
+use_collision = true
+size = Vector3(22.192505, 1481.6663, 18.052734)
+material = SubResource("StandardMaterial3D_0d0er")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=581521145]
+transform = Transform3D(0.98793024, 0, -0.15490016, 0, 1, 0, 0.15490016, 0, 0.98793024, -11.766813, 531.37366, -150.58195)
+use_collision = true
+size = Vector3(11.084961, 1305.8176, 36.1792)
+material = SubResource("StandardMaterial3D_p7pgw")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1393495562]
+transform = Transform3D(0.79870903, 0, -0.60171753, 0, 1, 0, 0.60171753, 0, 0.79870903, 1.2507081, 576.2223, -177.64586)
+use_collision = true
+size = Vector3(11.084961, 1395.5149, 42.132446)
+material = SubResource("StandardMaterial3D_p7pgw")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=94491745]
+transform = Transform3D(0.9975726, 0, 0.0696346, 0, 1, 0, -0.0696346, 0, 0.9975726, -20.845446, 487.44775, -122.54302)
+use_collision = true
+size = Vector3(28.35791, 1150.7295, 38.64209)
+material = SubResource("StandardMaterial3D_p7pgw")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1345075427]
+transform = Transform3D(0.99997145, 0, 0.007557202, 0, 1, 0, -0.007557202, 0, 0.99997145, 4.24988, -48.712875, -140.47867)
+use_collision = true
+size = Vector3(28.35791, 93.67232, 14.845703)
+material = SubResource("StandardMaterial3D_kuxid")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=544328200]
+transform = Transform3D(0.99997145, 0, 0.007557202, 0, 1, 0, -0.007557202, 0, 0.99997145, 4.381434, -78.65955, -123.07139)
+use_collision = true
+size = Vector3(28.35791, 12.193092, 49.661255)
+material = SubResource("StandardMaterial3D_kuxid")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=2043287440]
+transform = Transform3D(0.94990116, 0, 0.31255046, 0, 1, 0, -0.31255046, 0, 0.94990116, 8.775709, -40.18488, -151.85043)
+use_collision = true
+size = Vector3(18.828857, 58.06729, 14.845703)
+material = SubResource("StandardMaterial3D_kuxid")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1920982727]
+transform = Transform3D(0.8875662, 0, -0.46068007, 0, 1, 0, 0.46068007, 0, 0.8875662, 7.719608, -48.292606, -158.89314)
+use_collision = true
+size = Vector3(24.81778, 58.06729, 22.967773)
+material = SubResource("StandardMaterial3D_kuxid")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1934128501]
+transform = Transform3D(0.6518204, 0, -0.7583735, 0, 1, 0, 0.7583735, 0, 0.6518204, 14.510715, -64.2284, -167.63577)
+use_collision = true
+size = Vector3(28.131104, 58.06729, 20.365479)
+material = SubResource("StandardMaterial3D_ng1ea")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=634180007]
+transform = Transform3D(0.8000093, 0, -0.59998757, 0, 1, 0, 0.59998757, 0, 0.8000093, 26.83837, -53.493397, -170.49875)
+use_collision = true
+size = Vector3(12.741821, 22.420364, 12.547852)
+material = SubResource("StandardMaterial3D_ng1ea")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1313489797]
+transform = Transform3D(0.57837015, 0, -0.8157744, 0, 1, 0, 0.8157744, 0, 0.57837015, 24.103058, -56.773228, -175.26091)
+use_collision = true
+size = Vector3(14.888977, 22.420364, 12.398102)
+material = SubResource("StandardMaterial3D_ng1ea")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1938232962]
+transform = Transform3D(0.57837015, 0, -0.8157744, 0, 1, 0, 0.8157744, 0, 0.57837015, 29.659704, -55.84035, -181.37291)
+use_collision = true
+size = Vector3(9.618904, 13.558327, 18.30452)
+material = SubResource("StandardMaterial3D_ng1ea")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=2147252558]
+transform = Transform3D(0.4555138, 0, -0.89022887, 0, 1, 0, 0.89022887, 0, 0.4555138, 14.819169, -52.067616, -185.31885)
+use_collision = true
+size = Vector3(15.261536, 16.745338, 15.910797)
+material = SubResource("StandardMaterial3D_ng1ea")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=1642243099]
+transform = Transform3D(0.9607017, 0, -0.2775829, 0, 1, 0, 0.2775829, 0, 0.9607017, -0.38035774, -39.044903, -148.83777)
+use_collision = true
+size = Vector3(18.828857, 60.347244, 14.845703)
+material = SubResource("StandardMaterial3D_kuxid")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Environment/Valley/Level 1 to 2 Transition" unique_id=199020692]
+transform = Transform3D(0.9959552, 0, 0.089850396, 0, 1, 0, -0.089850396, 0, 0.9959552, 37.564793, 512.7366, -110.82865)
+use_collision = true
+size = Vector3(35.15747, 1078.352, 14.845703)
+material = SubResource("StandardMaterial3D_p7pgw")
+
+[node name="Level 2 to 3 Transition" type="Node3D" parent="Environment/Valley" unique_id=497815972]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=54257958]
+transform = Transform3D(0.8169537, 0, 0.57670325, 0, 1, 0, -0.57670325, 0, 0.8169537, 127.72008, -111.280876, -256.2688)
+use_collision = true
+size = Vector3(8.598633, 88.72949, 15.127134)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D24" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=846294262]
+transform = Transform3D(0.8169537, 0, 0.57670325, 0, 1, 0, -0.57670325, 0, 0.8169537, 114.26726, -147.84537, -245.88695)
+use_collision = true
+size = Vector3(27.702148, 21.284668, 25.191742)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=758509853]
+transform = Transform3D(0.98638916, 0, -0.16442788, 0, 1, 0, 0.16442788, 0, 0.98638916, 133.33217, -73.48871, -255.51395)
+use_collision = true
+size = Vector3(8.598633, 7.0717773, 10.009856)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=469569358]
+transform = Transform3D(0.4696149, 0.07108126, -0.88000536, -0.14965615, 0.9887381, 0, 0.87009484, 0.13169819, 0.47496393, 136.39114, -82.93455, -251.59499)
+use_collision = true
+size = Vector3(8.598633, 13.592773, 14.460449)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=419231157]
+transform = Transform3D(0.49351478, 0.075717434, -0.86643535, 0.15802644, 0.9718151, 0.17493716, 0.8552608, -0.22325373, 0.4676398, 138.05614, -86.7234, -246.38686)
+use_collision = true
+size = Vector3(8.598633, 7.8411865, 4.7945004)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=787955312]
+transform = Transform3D(0.47918254, -0.010498779, -0.8776527, 0.028229699, 0.99959546, 0.0034553893, 0.87726134, -0.026431672, 0.47928515, 139.08142, -91.21989, -242.03674)
+use_collision = true
+size = Vector3(8.598633, 14.762604, 5.957919)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=619791485]
+transform = Transform3D(0.6376979, 0.20519687, -0.74245274, -0.2958175, 0.955193, 0.009913743, 0.71121985, 0.2133084, 0.6698255, 142.57745, -89.59757, -248.1753)
+use_collision = true
+size = Vector3(14.217285, 13.423737, 9.356729)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1913725819]
+transform = Transform3D(0.6644971, -0.08489992, -0.74245274, 0.13762048, 0.9904354, 0.009913728, 0.73450965, -0.10876432, 0.66982543, 156.83112, -77.98303, -231.14497)
+use_collision = true
+size = Vector3(13.160522, 13.423737, 7.4771285)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=2067629299]
+transform = Transform3D(0.20587882, -0.08489992, -0.97488785, 0.12424044, 0.9904354, -0.060016625, 0.9706588, -0.10876432, 0.21445763, 147.40196, -78.29339, -226.6109)
+use_collision = true
+size = Vector3(13.160522, 13.423737, 7.4771285)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1545241046]
+transform = Transform3D(0.77829325, -0.08489992, -0.6221349, 0.13407755, 0.9904355, 0.032571264, 0.6134191, -0.10876432, 0.7822324, 144.70161, -30.655607, -240.86136)
+use_collision = true
+size = Vector3(15.512878, 93.15584, 19.011509)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1611103879]
+transform = Transform3D(0.4982067, 0.09130618, -0.8622376, -0.31426236, 0.9458379, -0.081423976, 0.8081023, 0.31153458, 0.49991697, 148.18658, -100.48974, -240.56325)
+use_collision = true
+size = Vector3(20.629272, 6.8015747, 7.4771285)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=462722688]
+transform = Transform3D(0.6562469, 0.09130618, -0.74900174, -0.29245216, 0.9458379, -0.14093421, 0.69556594, 0.31153458, 0.647406, 159.89928, -90.03715, -234.48523)
+use_collision = true
+size = Vector3(37.710297, 32.500397, 7.4329004)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1266148176]
+transform = Transform3D(0.9926686, 0.09130618, 0.07919896, -0.061567873, 0.9458379, -0.31874776, -0.10401294, 0.3115346, 0.94452524, 184.35675, -97.77492, -218.16104)
+use_collision = true
+size = Vector3(26.202862, 32.500397, 9.238911)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=2086661928]
+transform = Transform3D(0.6507743, 0, -0.7592715, 0, 0.9999999, 0, 0.75927144, 0, 0.6507744, 144.4084, 1224.2599, -257.63788)
+use_collision = true
+size = Vector3(24, 2661.1274, 7.4329004)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=969891731]
+transform = Transform3D(0.9953612, 0, 0.09621069, 0, 0.9999999, 0, -0.0962106, 0, 0.9953612, 133.09735, 1198.5679, -263.84863)
+use_collision = true
+size = Vector3(28.143799, 2738.9585, 7.4329004)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=21090211]
+transform = Transform3D(0.80418915, 0, 0.59437394, 0, 0.9999999, 0, -0.5943738, 0, 0.804189, 106.98715, 641.7451, -255.11531)
+use_collision = true
+size = Vector3(52.181946, 1625.3125, 7.4329004)
+material = SubResource("StandardMaterial3D_lp0bp")
+
+[node name="CSGBox3D23" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=947207105]
+transform = Transform3D(0.80418915, 0, 0.59437394, 0, 0.9999999, 0, -0.5943738, 0, 0.804189, 114.38784, 640.5913, -231.51144)
+use_collision = true
+size = Vector3(36.02603, 1623.0049, 7.4329004)
+material = SubResource("StandardMaterial3D_lp0bp")
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1257977133]
+transform = Transform3D(0.6507743, 0, -0.7592715, 0, 0.9999999, 0, 0.75927144, 0, 0.6507744, 130.68611, 1161.7166, -242.91533)
+use_collision = true
+size = Vector3(19.498047, 2663.1052, 7.4329004)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=2079269331]
+transform = Transform3D(0.31371406, 0.09130618, -0.9451176, -0.32423255, 0.945838, -0.016247127, 0.89244443, 0.31153458, 0.32632712, 137.13077, -88.563705, -232.2856)
+use_collision = true
+size = Vector3(34.15399, 32.500397, 7.4329004)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D25" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=363378537]
+transform = Transform3D(0.23221034, 0.09130619, -0.96837085, -0.32443973, 0.945838, 0.011382619, 0.9169611, 0.31153458, 0.24925673, 137.64279, -94.45635, -214.54526)
+use_collision = true
+size = Vector3(46.588226, 32.500397, 7.4329004)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D26" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1574616712]
+transform = Transform3D(-0.38664, 0.09130618, -0.9177, -0.2546276, 0.945838, 0.20138393, 0.88638294, 0.31153458, -0.34244972, 136.49419, -103.05879, -188.09111)
+use_collision = true
+size = Vector3(20.714733, 32.500397, 7.4329004)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=163913246]
+transform = Transform3D(0.7586683, 0.17131138, -0.62855, -0.26871398, 0.9611988, -0.06236653, 0.5934774, 0.21621555, 0.77526504, 166.9773, -108.33619, -222.6651)
+use_collision = true
+size = Vector3(46, 6.8015747, 7.4771285)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=840847942]
+transform = Transform3D(0.5808774, 0.13582385, -0.80257946, -0.24460664, 0.9695357, -0.0129586635, 0.7763694, 0.20384353, 0.59640497, 155.70139, -110.247185, -216.26656)
+use_collision = true
+size = Vector3(39.6304, 6.8015747, 23.74712)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1200506108]
+transform = Transform3D(0.49820668, 0.26485077, -0.8256176, -0.31426236, 0.94261736, 0.1127463, 0.8081023, 0.20328942, 0.552851, 141.08649, -100.93145, -236.35771)
+use_collision = true
+size = Vector3(20.629272, 7.3002014, 12.269428)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1229371184]
+transform = Transform3D(0.19251657, 0.011582416, -0.98122555, -0.25826183, 0.96527636, -0.039276894, 0.94669867, 0.2609744, 0.18882303, 146.25272, -107.53694, -212.45993)
+use_collision = true
+size = Vector3(49, 7.3002014, 12.269428)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1916769115]
+transform = Transform3D(0.49351475, -0.2707787, -0.82651204, 0.15802644, 0.96239984, -0.22093937, 0.8552607, -0.021573901, 0.5177488, 141.026, -86.83971, -248.70645)
+use_collision = true
+size = Vector3(7.126648, 7.8411865, 4.7945004)
+material = SubResource("StandardMaterial3D_x5sp8")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=882068990]
+transform = Transform3D(0.15621033, 0, -0.9877239, 0, 1, 0, 0.9877239, 0, 0.15621033, 139.48004, -77.24607, -255.42868)
+use_collision = true
+size = Vector3(4.7855225, 4.9990234, 4.4796257)
+material = SubResource("StandardMaterial3D_x5sp8")
 
 [node name="Map Boundaries" type="Node3D" parent="Environment" unique_id=24669483]
 
@@ -187,5 +536,15 @@ open_with_flames = {
 NodePath("../../Structures/Cauldrons/Unlit/CauldronUnlit"): true
 }
 
-[node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("4_5jr8x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.189314, 67.5854)
+[node name="InvisibleWall" parent="Environment" unique_id=1128943826 instance=ExtResource("6_kjd5s")]
+transform = Transform3D(0.8132426, 0, 6.7387285, 0, 31.40466, 0, -0.58192396, 0, 9.417418, 123.456566, -66.826355, -254.18779)
+
+[node name="Levels" type="Node3D" parent="." unique_id=1537864358]
+
+[node name="Level1" parent="Levels" unique_id=1404524287 instance=ExtResource("1_0nbjp")]
+
+[node name="Level2" parent="Levels" unique_id=487716865 instance=ExtResource("2_p7pgw")]
+transform = Transform3D(0.58953476, 0, -0.80774295, 0, 1, 0, 0.80774295, 0, 0.58953476, 45.990612, -47.79114, -174.51228)
+
+[node name="Level3" parent="Levels" unique_id=1382089537 instance=ExtResource("3_ng1ea")]
+transform = Transform3D(-0.8147029, 0, -0.57987857, 0, 1, 0, 0.57987857, 0, -0.8147029, 198.38025, -100.17095, -167.98581)

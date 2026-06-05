@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dusjnr17xobst"]
 
-[ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/Player/AnthroCat.tscn" id="1_pcvc2"]
 [ext_resource type="Texture2D" uid="uid://bm4sh8dwl2ucj" path="res://Textures/Valley/DarkStone.png" id="2_jwpnw"]
 [ext_resource type="PackedScene" uid="uid://bnxdinvs57p5f" path="res://Scenes/Structures/CauldronLit.tscn" id="3_5oy68"]
 [ext_resource type="Texture2D" uid="uid://cohblrv30w1ai" path="res://Textures/Valley/DarkStoneSmooth.png" id="3_6cxjt"]
@@ -17,29 +16,7 @@ uv1_triplanar = true
 albedo_texture = ExtResource("3_6cxjt")
 uv1_triplanar = true
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_57lp3"]
-sky_top_color = Color(0.312699, 1.2032687e-07, 0.10212644, 1)
-sky_horizon_color = Color(0, 0, 0, 1)
-sky_curve = 0.001093388
-ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Sky" id="Sky_fj7yv"]
-sky_material = SubResource("ProceduralSkyMaterial_57lp3")
-
-[sub_resource type="Environment" id="Environment_n5ptj"]
-background_mode = 2
-sky = SubResource("Sky_fj7yv")
-ambient_light_energy = 0.0
-tonemap_mode = 2
-glow_enabled = true
-glow_intensity = 0.01
-glow_strength = 1.25
-
 [node name="Level3" type="Node3D" unique_id=1382089537]
-
-[node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("1_pcvc2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.472332, -5.2086296, 47.632866)
 
 [node name="Level" type="Node3D" parent="." unique_id=296243331]
 
@@ -352,9 +329,6 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.005259, -42.733837, -116.7
 
 [node name="CauldronLit4" parent="Level/Structures/Lit Cauldrons" unique_id=1622642051 instance=ExtResource("3_5oy68")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.8795004, -42.733837, -116.752945)
-
-[node name="WorldEnvironment2" type="WorldEnvironment" parent="." unique_id=537538307]
-environment = SubResource("Environment_n5ptj")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1843981724]
 transform = Transform3D(-0.86602545, -0.06553995, -0.49568596, 0.022986611, -0.9955424, 0.09147083, -0.49947143, 0.06782192, 0.8636716, 0, 0, 0)
