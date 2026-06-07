@@ -9,9 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://dnh2atcr2mn0n" path="res://Scenes/Player/AnthroCat.tscn" id="4_5jr8x"]
 [ext_resource type="Texture2D" uid="uid://cxb553kql3lit" path="res://Textures/Valley/Dirt.png" id="5_hveh7"]
 [ext_resource type="PackedScene" uid="uid://cpnwm6y1uy8er" path="res://Scenes/Map Boundaries/InvisibleWall.tscn" id="6_kjd5s"]
+[ext_resource type="PackedScene" uid="uid://bisaq1snjohps" path="res://Scenes/Trees/Tree3.tscn" id="6_nfd2q"]
 [ext_resource type="Texture2D" uid="uid://bm4sh8dwl2ucj" path="res://Textures/Valley/DarkStone.png" id="7_0d0er"]
 [ext_resource type="Texture2D" uid="uid://dpa3e3c216eec" path="res://Textures/Valley/Stone.png" id="7_kuxid"]
+[ext_resource type="PackedScene" uid="uid://d6dkamwqldpx" path="res://Scenes/Trees/Tree1.tscn" id="7_liy54"]
 [ext_resource type="PackedScene" uid="uid://63xm31rp4umx" path="res://Scenes/Map Boundaries/InvisibleWallDisappearing.tscn" id="7_p7pgw"]
+[ext_resource type="PackedScene" uid="uid://cr38nu4ixt87j" path="res://Scenes/Rocks/Rock2.tscn" id="8_c1bjq"]
+[ext_resource type="PackedScene" uid="uid://0iqhtf01u3gg" path="res://Scenes/Rocks/Rock1.tscn" id="9_7n4rk"]
+[ext_resource type="PackedScene" uid="uid://d2s4qlq0neb3n" path="res://Scenes/Trees/Tree2.tscn" id="10_jclsg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ouhkt"]
 sky_top_color = Color(0.10571615, 6.545782e-06, 0.4761901, 1)
@@ -86,7 +91,7 @@ uv1_triplanar = true
 [node name="World" type="Node3D" unique_id=677842979]
 
 [node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("4_5jr8x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3032333, 15.123308, 68.0252)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4719844, 15.123308, 62.95889)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1756013573]
 environment = SubResource("Environment_5jr8x")
@@ -122,107 +127,131 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.8053944, -1.0186882, 32.99
 
 [node name="Starting Area" type="Node3D" parent="Environment/Valley" unique_id=1018758497]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=931138131]
+[node name="Valley" type="Node3D" parent="Environment/Valley/Starting Area" unique_id=478135917]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=931138131]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0566807, -55.052055, 37.37585)
 use_collision = true
 size = Vector3(31.519867, 107.77832, 23.501404)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1321351480]
+[node name="CSGBox3D13" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=1321351480]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.434816, -95.92773, 12.658333)
 use_collision = true
 size = Vector3(85.45565, 26.026978, 40.332817)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1206374552]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=1206374552]
 transform = Transform3D(0.95305866, 0, -0.30278575, 0, 1, 0, 0.30278575, 0, 0.95305866, -2.3499851, 0.53555965, 47.83669)
 use_collision = true
 size = Vector3(12.035919, 5.3969116, 6.923874)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1728988404]
+[node name="CSGBox3D4" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=1728988404]
 transform = Transform3D(0.998029, 0, 0.062755704, 0, 1, 0, -0.062755704, 0, 0.998029, 0.44673055, 1.1629529, 52.698196)
 use_collision = true
 size = Vector3(27.371372, 9.306198, 8.613792)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=2025796327]
+[node name="CSGBox3D5" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=2025796327]
 transform = Transform3D(0.9870637, 0, -0.16032912, 0, 1, 0, 0.16032912, 0, 0.9870637, -1.3634815, 7.296391, 66.12895)
 use_collision = true
 size = Vector3(29.67885, 11.054611, 25.922125)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1541101177]
+[node name="CSGBox3D6" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=1541101177]
 transform = Transform3D(0.98620486, 0, 0.1655296, 0, 1, 0, -0.1655296, 0, 0.98620486, 6.9686246, 14.068789, 81.956116)
 use_collision = true
 size = Vector3(16.912632, 24.599407, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D14" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1174110856]
+[node name="CSGBox3D14" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=1174110856]
 transform = Transform3D(0.98620486, 0, 0.1655296, 0, 1, 0, -0.1655296, 0, 0.98620486, 11.744041, 65.56865, 165.67874)
 use_collision = true
 size = Vector3(26.597063, 127.59914, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=675231215]
+[node name="CSGBox3D15" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=675231215]
 transform = Transform3D(0.86572856, 0, -0.5005138, 0, 1, 0, 0.5005138, 0, 0.86572856, -18.204546, 65.56865, 164.47458)
 use_collision = true
 size = Vector3(46.46372, 127.59914, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1776503726]
+[node name="CSGBox3D16" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=1776503726]
 transform = Transform3D(1.8452646, 0, 0.189731, 0, 1, 0, -0.30971852, 0, 1.1303939, 24.969341, 337.43115, 537.525)
 use_collision = true
 size = Vector3(26.597063, 367.98425, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D17" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=294216858]
+[node name="CSGBox3D17" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=294216858]
 transform = Transform3D(1.5277202, 0, -0.27924448, 0, 1, 0, 0.88323873, 0, 0.48300356, -56.45821, 370.69498, 521.85205)
 use_collision = true
 size = Vector3(79.226974, 433.51483, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=251945469]
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=251945469]
 transform = Transform3D(0.99907166, 0, 0.043078832, 0, 1, 0, -0.043078832, 0, 0.99907166, 34.72591, 373.72443, 358.10294)
 use_collision = true
 size = Vector3(21.524675, 917.3901, 678.4635)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=2042543640]
+[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=2042543640]
 transform = Transform3D(0.96221316, 0, -0.27229705, 0, 1, 0, 0.27229705, 0, 0.96221316, 35.516197, 391.5603, 27.144041)
 use_collision = true
 size = Vector3(21.524675, 953.06177, 51.370686)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1248048629]
+[node name="CSGBox3D11" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=1248048629]
 transform = Transform3D(0.9683571, 0, 0.24956882, 0, 1, 0, -0.24956882, 0, 0.9683571, 44.45569, 437.86923, 4.312687)
 use_collision = true
 size = Vector3(16.911898, 1045.6797, 15.273029)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=2083845569]
+[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=2083845569]
 transform = Transform3D(0.98456055, 0, -0.1404218, 0, 0.99452394, 0, 0.1404218, 0, 0.98456055, -69.79191, 368.27167, 365.6721)
 use_collision = true
 size = Vector3(22.958504, 965.99426, 696.8939)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=1167435607]
+[node name="CSGBox3D12" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=1167435607]
 transform = Transform3D(0.9810837, 0, 0.1935837, 0, 1, 0, -0.1935837, 0, 0.9810837, -25.663021, 405.48193, 14.504121)
 use_collision = true
 size = Vector3(22.127567, 1040.4148, 31.45176)
 material = SubResource("StandardMaterial3D_87yka")
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=113188770]
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=113188770]
 transform = Transform3D(0.8799721, 0, -0.47502524, 0, 1, 0, 0.47502524, 0, 0.8799721, -12.863383, 15.175529, 79.39471)
 use_collision = true
 size = Vector3(21.510027, 26.812887, 11.199222)
 material = SubResource("StandardMaterial3D_5jr8x")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="Environment/Valley/Starting Area" unique_id=396613198]
+[node name="CSGBox3D3" type="CSGBox3D" parent="Environment/Valley/Starting Area/Valley" unique_id=396613198]
 transform = Transform3D(0.9724514, 0, 0.23310596, 0, 1, 0, -0.23310596, 0, 0.9724514, 4.0653596, 0.73743343, 48.960224)
 use_collision = true
 size = Vector3(12.035919, 5.800659, 8.959984)
 material = SubResource("StandardMaterial3D_5jr8x")
+
+[node name="Trees" type="Node3D" parent="Environment/Valley/Starting Area" unique_id=306834674]
+
+[node name="Tree3" parent="Environment/Valley/Starting Area/Trees" unique_id=1812891972 instance=ExtResource("6_nfd2q")]
+transform = Transform3D(2.832, 0, 0, 0, 3.041, 0, 0, 0, 1.5, 1.5767636, 12.535879, 71.431305)
+
+[node name="Tree1" parent="Environment/Valley/Starting Area/Trees" unique_id=2064914525 instance=ExtResource("7_liy54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0156736, 12.12209, 55.878773)
+
+[node name="Tree2" parent="Environment/Valley/Starting Area/Trees" unique_id=880701514 instance=ExtResource("10_jclsg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9746704, -1.3276956, 29.994877)
+
+[node name="Tree4" parent="Environment/Valley/Starting Area/Trees" unique_id=1572377787 instance=ExtResource("7_liy54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.77597, 28.497044, 75.65162)
+
+[node name="Rocks" type="Node3D" parent="Environment/Valley/Starting Area" unique_id=1707829193]
+
+[node name="Rock2" parent="Environment/Valley/Starting Area/Rocks" unique_id=1714921172 instance=ExtResource("8_c1bjq")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 6.7858286, 12.957315, 60.517242)
+
+[node name="Rock1" parent="Environment/Valley/Starting Area/Rocks" unique_id=613063330 instance=ExtResource("9_7n4rk")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 5.4751973, 3.5215776, 44.95744)
 
 [node name="Level 1 to 2 Transition" type="Node3D" parent="Environment/Valley" unique_id=890016292]
 
@@ -536,7 +565,7 @@ open_with_flames = {
 NodePath("../../Structures/Cauldrons/Unlit/CauldronUnlit"): true
 }
 
-[node name="InvisibleWall" parent="Environment" unique_id=1128943826 instance=ExtResource("6_kjd5s")]
+[node name="InvisibleWall3" parent="Environment/Map Boundaries" unique_id=1128943826 instance=ExtResource("6_kjd5s")]
 transform = Transform3D(0.8132426, 0, 6.7387285, 0, 31.40466, 0, -0.58192396, 0, 9.417418, 123.456566, -66.826355, -254.18779)
 
 [node name="Levels" type="Node3D" parent="." unique_id=1537864358]
