@@ -1,0 +1,467 @@
+[gd_scene format=3 uid="uid://dxiy2n8diics3"]
+
+[ext_resource type="Texture2D" uid="uid://cf816xcjfa16x" path="res://Textures/Valley/Grass.png" id="1_oinws"]
+[ext_resource type="Script" uid="uid://bpp2cdl5wncxw" path="res://Scripts/MainMenu/mainmenu.gd" id="1_optja"]
+[ext_resource type="Texture2D" uid="uid://cxb553kql3lit" path="res://Textures/Valley/Dirt.png" id="2_w12oy"]
+[ext_resource type="PackedScene" uid="uid://bisaq1snjohps" path="res://Scenes/Trees/Tree3.tscn" id="3_51s57"]
+[ext_resource type="PackedScene" uid="uid://d6dkamwqldpx" path="res://Scenes/Trees/Tree1.tscn" id="4_wc34y"]
+[ext_resource type="PackedScene" uid="uid://d2s4qlq0neb3n" path="res://Scenes/Trees/Tree2.tscn" id="5_j0ud3"]
+[ext_resource type="PackedScene" uid="uid://cr38nu4ixt87j" path="res://Scenes/Rocks/Rock2.tscn" id="6_cu8c3"]
+[ext_resource type="PackedScene" uid="uid://0iqhtf01u3gg" path="res://Scenes/Rocks/Rock1.tscn" id="7_5oqea"]
+[ext_resource type="Texture2D" uid="uid://h5yoi0cmndj5" path="res://Animations/Cat/Sitting/frame0000.png" id="8_5oqea"]
+[ext_resource type="Texture2D" uid="uid://c44lpo11cgb64" path="res://Animations/Cat/Sitting/frame0001.png" id="9_ct4qi"]
+[ext_resource type="Texture2D" uid="uid://da7b0xdasnrlc" path="res://Animations/Cat/Sitting/frame0002.png" id="10_5grb0"]
+[ext_resource type="Texture2D" uid="uid://bvih6h0fnljqg" path="res://Animations/Cat/Sitting/frame0003.png" id="11_d6aj2"]
+[ext_resource type="Texture2D" uid="uid://c3ykg28n4ghds" path="res://Animations/Cat/Sitting/frame0004.png" id="12_1yf6s"]
+[ext_resource type="Texture2D" uid="uid://bxc5qnow8r4b1" path="res://Animations/Cat/Sitting/frame0005.png" id="13_wm7xw"]
+[ext_resource type="Texture2D" uid="uid://byohitfgps35" path="res://Animations/Spirit/frame0000.png" id="15_mqyq1"]
+[ext_resource type="Texture2D" uid="uid://cnou6iww6jic2" path="res://Animations/Spirit/frame0001.png" id="16_glyep"]
+[ext_resource type="Texture2D" uid="uid://bxx7xugbwrk08" path="res://Animations/Spirit/frame0002.png" id="17_optja"]
+[ext_resource type="Texture2D" uid="uid://dr5kvg3g3e8dj" path="res://Animations/Spirit/frame0003.png" id="18_nsawb"]
+[ext_resource type="Texture2D" uid="uid://c36i4udthsev2" path="res://Animations/Spirit/frame0004.png" id="19_ha6qr"]
+[ext_resource type="Texture2D" uid="uid://dwxe42ytjmbap" path="res://Animations/Spirit/frame0005.png" id="20_6qlou"]
+[ext_resource type="Texture2D" uid="uid://2fqo61m7nb6w" path="res://Animations/Spirit/frame0006.png" id="21_qlcm3"]
+[ext_resource type="Texture2D" uid="uid://b7a02w86pyshb" path="res://Animations/Spirit/frame0007.png" id="22_jn7o5"]
+[ext_resource type="Texture2D" uid="uid://bpjotn6f8rjmj" path="res://Animations/Spirit/frame0008.png" id="23_svmqw"]
+[ext_resource type="Texture2D" uid="uid://bgexpyq5mm5a0" path="res://Animations/Spirit/frame0009.png" id="24_cxafy"]
+[ext_resource type="Texture2D" uid="uid://b8dj3c1xupxta" path="res://Animations/Spirit/frame0010.png" id="25_k6kf4"]
+[ext_resource type="Texture2D" uid="uid://cn47qnmqqbgr8" path="res://Animations/Spirit/frame0011.png" id="26_qo4id"]
+[ext_resource type="Texture2D" uid="uid://bu638r5nirwoc" path="res://Animations/Spirit/frame0012.png" id="27_2gwx3"]
+[ext_resource type="Texture2D" uid="uid://bpreop88wj5ah" path="res://Animations/Spirit/frame0013.png" id="28_vg0rs"]
+[ext_resource type="Texture2D" uid="uid://c5v4ajgk0ejt7" path="res://Animations/Spirit/frame0014.png" id="29_4ne26"]
+[ext_resource type="Texture2D" uid="uid://danqi60sw0hem" path="res://Animations/Spirit/frame0015.png" id="30_sk33y"]
+[ext_resource type="Texture2D" uid="uid://wst1ubtuk4xr" path="res://Animations/Spirit/frame0016.png" id="31_1mlro"]
+[ext_resource type="Texture2D" uid="uid://bbqm0femre0a1" path="res://Animations/Spirit/frame0017.png" id="32_7wwgj"]
+[ext_resource type="Texture2D" uid="uid://dl6y5fmr6v6x" path="res://Animations/Spirit/frame0018.png" id="33_csmpu"]
+[ext_resource type="Texture2D" uid="uid://bgajkhlu4sgur" path="res://Animations/Spirit/frame0019.png" id="34_a8ky5"]
+[ext_resource type="Texture2D" uid="uid://py7ug8vuppqi" path="res://Animations/Spirit/frame0020.png" id="35_4aynt"]
+[ext_resource type="Texture2D" uid="uid://35yfiq305bmq" path="res://Animations/Spirit/frame0021.png" id="36_cq5dc"]
+[ext_resource type="Texture2D" uid="uid://cfel8repgdx6v" path="res://Animations/Title/frame0000.png" id="37_qlcm3"]
+[ext_resource type="Texture2D" uid="uid://bkfkvteodnfp7" path="res://Animations/Title/frame0001.png" id="38_jn7o5"]
+[ext_resource type="Texture2D" uid="uid://ykgttir38hlq" path="res://Animations/Title/frame0002.png" id="39_svmqw"]
+[ext_resource type="Texture2D" uid="uid://bxgoyf68tih6r" path="res://Animations/Title/frame0003.png" id="40_cxafy"]
+[ext_resource type="Texture2D" uid="uid://bdyy8h7xjsmjp" path="res://Animations/Title/frame0004.png" id="41_k6kf4"]
+[ext_resource type="Texture2D" uid="uid://blpnvhkglk812" path="res://Animations/Title/frame0005.png" id="42_qo4id"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ct4qi"]
+albedo_texture = ExtResource("1_oinws")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5grb0"]
+albedo_texture = ExtResource("2_w12oy")
+uv1_triplanar = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2b5gq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5oqea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ct4qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5grb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d6aj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1yf6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wm7xw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mqyq1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_mqyq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_glyep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_optja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nsawb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ha6qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6qlou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qlcm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jn7o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_svmqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_cxafy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_k6kf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qo4id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2gwx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_vg0rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_4ne26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_sk33y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1mlro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_7wwgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_csmpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_a8ky5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_4aynt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_cq5dc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ct4qi"]
+sky_top_color = Color(0.10571615, 6.545782e-06, 0.4761901, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_curve = 3.3940845
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_fj7yv"]
+sky_material = SubResource("ProceduralSkyMaterial_ct4qi")
+
+[sub_resource type="Environment" id="Environment_5grb0"]
+background_mode = 2
+sky = SubResource("Sky_fj7yv")
+ambient_light_energy = 0.0
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 0.01
+glow_strength = 1.25
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2gwx3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_qlcm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_jn7o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_svmqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_cxafy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_k6kf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_qo4id")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="MainMenu" type="Node3D" unique_id=851050783]
+script = ExtResource("1_optja")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=143060554]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="Starting Area" type="Node3D" parent="." unique_id=1275577992]
+
+[node name="Valley" type="Node3D" parent="Starting Area" unique_id=2021036217]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Starting Area/Valley" unique_id=1650715447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0566807, -55.052055, 37.37585)
+use_collision = true
+size = Vector3(31.519867, 107.77832, 23.501404)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Starting Area/Valley" unique_id=789822952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.434816, -95.92773, 12.658333)
+use_collision = true
+size = Vector3(85.45565, 26.026978, 40.332817)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Starting Area/Valley" unique_id=2050767369]
+transform = Transform3D(0.95305866, 0, -0.30278575, 0, 1, 0, 0.30278575, 0, 0.95305866, -2.3499851, 0.53555965, 47.83669)
+use_collision = true
+size = Vector3(12.035919, 5.3969116, 6.923874)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Starting Area/Valley" unique_id=100364168]
+transform = Transform3D(0.998029, 0, 0.062755704, 0, 1, 0, -0.062755704, 0, 0.998029, 0.44673055, 1.1629529, 52.698196)
+use_collision = true
+size = Vector3(27.371372, 9.306198, 8.613792)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Starting Area/Valley" unique_id=1657028334]
+transform = Transform3D(0.9870637, 0, -0.16032912, 0, 1, 0, 0.16032912, 0, 0.9870637, -1.3634815, 7.296391, 66.12895)
+use_collision = true
+size = Vector3(29.67885, 11.054611, 25.922125)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Starting Area/Valley" unique_id=1265686744]
+transform = Transform3D(0.98620486, 0, 0.1655296, 0, 1, 0, -0.1655296, 0, 0.98620486, 6.9686246, 14.068789, 81.956116)
+use_collision = true
+size = Vector3(16.912632, 24.599407, 11.199222)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Starting Area/Valley" unique_id=306755931]
+transform = Transform3D(0.98620486, 0, 0.1655296, 0, 1, 0, -0.1655296, 0, 0.98620486, 11.744041, 65.56865, 165.67874)
+use_collision = true
+size = Vector3(26.597063, 127.59914, 11.199222)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Starting Area/Valley" unique_id=1037202302]
+transform = Transform3D(0.86572856, 0, -0.5005138, 0, 1, 0, 0.5005138, 0, 0.86572856, -18.204546, 65.56865, 164.47458)
+use_collision = true
+size = Vector3(46.46372, 127.59914, 11.199222)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Starting Area/Valley" unique_id=432663551]
+transform = Transform3D(1.8452646, 0, 0.189731, 0, 1, 0, -0.30971852, 0, 1.1303939, 24.969341, 337.43115, 537.525)
+use_collision = true
+size = Vector3(26.597063, 367.98425, 11.199222)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Starting Area/Valley" unique_id=1760970865]
+transform = Transform3D(1.5277202, 0, -0.27924448, 0, 1, 0, 0.88323873, 0, 0.48300356, -56.45821, 370.69498, 521.85205)
+use_collision = true
+size = Vector3(79.226974, 433.51483, 11.199222)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Starting Area/Valley" unique_id=809184851]
+transform = Transform3D(0.99907166, 0, 0.043078832, 0, 1, 0, -0.043078832, 0, 0.99907166, 34.72591, 373.72443, 358.10294)
+use_collision = true
+size = Vector3(21.524675, 917.3901, 678.4635)
+material = SubResource("StandardMaterial3D_5grb0")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Starting Area/Valley" unique_id=1779198138]
+transform = Transform3D(0.96221316, 0, -0.27229705, 0, 1, 0, 0.27229705, 0, 0.96221316, 35.516197, 391.5603, 27.144041)
+use_collision = true
+size = Vector3(21.524675, 953.06177, 51.370686)
+material = SubResource("StandardMaterial3D_5grb0")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Starting Area/Valley" unique_id=1234284661]
+transform = Transform3D(0.9683571, 0, 0.24956882, 0, 1, 0, -0.24956882, 0, 0.9683571, 44.45569, 437.86923, 4.312687)
+use_collision = true
+size = Vector3(16.911898, 1045.6797, 15.273029)
+material = SubResource("StandardMaterial3D_5grb0")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Starting Area/Valley" unique_id=1974440795]
+transform = Transform3D(0.98456055, 0, -0.1404218, 0, 0.99452394, 0, 0.1404218, 0, 0.98456055, -69.79191, 368.27167, 365.6721)
+use_collision = true
+size = Vector3(22.958504, 965.99426, 696.8939)
+material = SubResource("StandardMaterial3D_5grb0")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Starting Area/Valley" unique_id=424785205]
+transform = Transform3D(0.9810837, 0, 0.1935837, 0, 1, 0, -0.1935837, 0, 0.9810837, -25.663021, 405.48193, 14.504121)
+use_collision = true
+size = Vector3(22.127567, 1040.4148, 31.45176)
+material = SubResource("StandardMaterial3D_5grb0")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Starting Area/Valley" unique_id=1230043384]
+transform = Transform3D(0.8799721, 0, -0.47502524, 0, 1, 0, 0.47502524, 0, 0.8799721, -12.863383, 15.175529, 79.39471)
+use_collision = true
+size = Vector3(21.510027, 26.812887, 11.199222)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Starting Area/Valley" unique_id=187899582]
+transform = Transform3D(0.9724514, 0, 0.23310596, 0, 1, 0, -0.23310596, 0, 0.9724514, 4.0653596, 0.73743343, 48.960224)
+use_collision = true
+size = Vector3(12.035919, 5.800659, 8.959984)
+material = SubResource("StandardMaterial3D_ct4qi")
+
+[node name="Trees" type="Node3D" parent="Starting Area" unique_id=1996694967]
+
+[node name="Tree3" parent="Starting Area/Trees" unique_id=1812891972 instance=ExtResource("3_51s57")]
+transform = Transform3D(2.832, 0, 0, 0, 3.041, 0, 0, 0, 1.5, 1.5767636, 12.535879, 71.431305)
+
+[node name="Tree1" parent="Starting Area/Trees" unique_id=2075453708 instance=ExtResource("4_wc34y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0156736, 12.12209, 55.878773)
+
+[node name="Tree2" parent="Starting Area/Trees" unique_id=1824842424 instance=ExtResource("5_j0ud3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9746704, -1.3276956, 29.994877)
+
+[node name="Tree4" parent="Starting Area/Trees" unique_id=45961073 instance=ExtResource("4_wc34y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.77597, 28.497044, 75.65162)
+
+[node name="Rocks" type="Node3D" parent="Starting Area" unique_id=162858482]
+
+[node name="Rock2" parent="Starting Area/Rocks" unique_id=1925805641 instance=ExtResource("6_cu8c3")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 6.7858286, 12.957315, 60.517242)
+
+[node name="Rock1" parent="Starting Area/Rocks" unique_id=99388991 instance=ExtResource("7_5oqea")]
+transform = Transform3D(1.887855, 0, 0, 0, 2.0266526, 0, 0, 0, 1, 5.4751973, 3.5215776, 44.95744)
+
+[node name="Cat" type="Node3D" parent="Starting Area" unique_id=982648138]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Starting Area/Cat" unique_id=1550933794]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0.30721846, 14.161134, 71.51336)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_2b5gq")
+
+[node name="Spirit" type="Node3D" parent="Starting Area" unique_id=498106385]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Starting Area/Spirit" unique_id=1936639398]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -1.0760633, 15.444778, 71.72227)
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_mqyq1")
+
+[node name="Lights" type="Node3D" parent="Starting Area/Spirit/AnimatedSprite3D" unique_id=651702242]
+transform = Transform3D(2.5000002, 0, 0, 0, 2.5000002, 0, 0, 0, 2.5000002, 0, -1.99405, 0.027698517)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Starting Area/Spirit/AnimatedSprite3D/Lights" unique_id=1215184215]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, 0, -0.98404455)
+light_energy = 0.15
+light_size = 0.238
+light_specular = 0.198
+shadow_bias = 1.684
+shadow_blur = 2.782
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Starting Area/Spirit/AnimatedSprite3D/Lights" unique_id=1483276860]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 1.037822, 0, 0)
+light_energy = 0.15
+light_size = 0.238
+light_specular = 0.198
+shadow_bias = 1.684
+shadow_blur = 2.782
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Starting Area/Spirit/AnimatedSprite3D/Lights" unique_id=1316394486]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, 0, 0.9924638)
+light_energy = 0.15
+light_size = 0.238
+light_specular = 0.198
+shadow_bias = 1.684
+shadow_blur = 2.782
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Starting Area/Spirit/AnimatedSprite3D/Lights" unique_id=4745107]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, -1.3239602, 0, 0)
+light_energy = 0.15
+light_size = 0.238
+light_specular = 0.198
+shadow_bias = 1.684
+shadow_blur = 2.782
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Starting Area/Spirit/AnimatedSprite3D/Lights" unique_id=1135775009]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, 1.1107683, 0)
+light_energy = 0.15
+light_size = 0.238
+light_specular = 0.198
+shadow_bias = 1.684
+shadow_blur = 2.782
+distance_fade_begin = 7.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Starting Area/Spirit/AnimatedSprite3D/Lights" unique_id=886993465]
+transform = Transform3D(6.666666, 0, 0, 0, 6.666666, 0, 0, 0, 6.666666, 0, -1.12064, 0)
+light_energy = 0.15
+light_size = 0.238
+light_specular = 0.198
+shadow_bias = 1.684
+shadow_blur = 2.782
+distance_fade_begin = 7.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1838755426]
+environment = SubResource("Environment_5grb0")
+
+[node name="Control" type="Control" parent="." unique_id=711017856]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control" unique_id=1914712966]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer" unique_id=1036932800]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Control/SubViewportContainer/SubViewport" unique_id=176563173]
+transform = Transform3D(-0.9999759, 0.0015781461, -0.006756143, 0, 0.9737866, 0.22746372, 0.0069380123, 0.22745825, -0.9737631, -1.1411988, 15.249007, 68.92655)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=48068921]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -421.0
+offset_top = -50.5
+offset_right = -200.0
+offset_bottom = 50.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="Control/VBoxContainer" unique_id=1349272030]
+layout_mode = 2
+text = "START"
+
+[node name="OptionsButton" type="Button" parent="Control/VBoxContainer" unique_id=1028151772]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="QuitButton" type="Button" parent="Control/VBoxContainer" unique_id=2061380749]
+layout_mode = 2
+text = "QUIT"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=770677532]
+position = Vector2(835, 136)
+scale = Vector2(0.49099103, 0.490991)
+sprite_frames = SubResource("SpriteFrames_2gwx3")
+frame = 5
+frame_progress = 0.7056892
+
+[connection signal="pressed" from="Control/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

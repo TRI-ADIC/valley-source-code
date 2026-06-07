@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxx7xugbwrk08"
-path.s3tc="res://.godot/imported/frame0002.png-9704077eaed883559f46d28064d4a072.s3tc.ctex"
+uid="uid://c3ykg28n4ghds"
+path.s3tc="res://.godot/imported/frame0004.png-910b770769ae3b537791e9e268363d84.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Animations/Spirit/frame0002.png"
-dest_files=["res://.godot/imported/frame0002.png-9704077eaed883559f46d28064d4a072.s3tc.ctex"]
+source_file="res://Animations/Cat/Sitting/frame0004.png"
+dest_files=["res://.godot/imported/frame0004.png-910b770769ae3b537791e9e268363d84.s3tc.ctex"]
 
 [params]
 
