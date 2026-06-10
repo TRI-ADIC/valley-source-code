@@ -12,4 +12,10 @@ func _ready() -> void:
 
 
 func _on_quit_button_pressed() -> void:
+	%ScreenTransition.show()
+	%ScreenTransition/FadeTimer.start()
+	%ScreenTransition/AnimationPlayer.play("fade_in")
+
+
+func _on_fade_timer_timeout() -> void:
 	get_tree().quit()

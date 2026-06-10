@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bhyopv1va7imc"]
 
 [ext_resource type="PackedScene" uid="uid://dusjnr17xobst" path="res://Scenes/Levels/Level3.tscn" id="1_777ee"]
-[ext_resource type="Script" uid="uid://dcqcmp0hevv6f" path="res://Scripts/end_scene.gd" id="1_y6xct"]
+[ext_resource type="Script" uid="uid://dcqcmp0hevv6f" path="res://Scripts/End Scene/end_scene.gd" id="1_y6xct"]
 [ext_resource type="Texture2D" uid="uid://bjm1lmgh6611j" path="res://Animations/Cat/Standing/frame0000.png" id="2_ksiwb"]
 [ext_resource type="Texture2D" uid="uid://cbyfb2tj78j78" path="res://Animations/Cat/Standing/frame0001.png" id="3_y6xct"]
 [ext_resource type="Texture2D" uid="uid://dh6jn250bbguh" path="res://Animations/Cat/Standing/frame0002.png" id="4_ytewc"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://gaujwrx5rrxv" path="res://Animations/TBC/frame0003.png" id="34_1t0l7"]
 [ext_resource type="Texture2D" uid="uid://edcpcyo68j0a" path="res://Animations/TBC/frame0004.png" id="35_3sku1"]
 [ext_resource type="Texture2D" uid="uid://c25r24yjdlluf" path="res://Animations/TBC/frame0005.png" id="36_cghif"]
+[ext_resource type="PackedScene" uid="uid://7uoxxnq1x72g" path="res://Scenes/Screen Transition/Screen Transition.tscn" id="37_oif7n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uwetn"]
 animations = [{
@@ -308,4 +309,13 @@ position = Vector2(979, 366)
 scale = Vector2(0.612069, 0.61206895)
 sprite_frames = SubResource("SpriteFrames_ymhk1")
 
+[node name="ScreenTransition" parent="Control" unique_id=1098636902 instance=ExtResource("37_oif7n")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="FadeTimer" type="Timer" parent="Control/ScreenTransition" unique_id=710843194]
+wait_time = 0.5
+
 [connection signal="pressed" from="Control/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="timeout" from="Control/ScreenTransition/FadeTimer" to="." method="_on_fade_timer_timeout"]

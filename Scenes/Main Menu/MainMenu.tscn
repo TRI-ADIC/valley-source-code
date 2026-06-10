@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://bxgoyf68tih6r" path="res://Animations/Title/frame0003.png" id="40_q4x8i"]
 [ext_resource type="Texture2D" uid="uid://bdyy8h7xjsmjp" path="res://Animations/Title/frame0004.png" id="41_21e6c"]
 [ext_resource type="Texture2D" uid="uid://blpnvhkglk812" path="res://Animations/Title/frame0005.png" id="42_mux3q"]
+[ext_resource type="PackedScene" uid="uid://7uoxxnq1x72g" path="res://Scenes/Screen Transition/Screen Transition.tscn" id="43_6tjnn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ct4qi"]
 albedo_texture = ExtResource("2_6tjnn")
@@ -463,6 +464,18 @@ sprite_frames = SubResource("SpriteFrames_2gwx3")
 frame = 5
 frame_progress = 0.7056892
 
+[node name="ScreenTransition" parent="Control" unique_id=1098636902 instance=ExtResource("43_6tjnn")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_right = -1676.2195
+offset_bottom = -796.2913
+scale = Vector2(8.200001, 4.120001)
+
+[node name="FadeTimer" type="Timer" parent="Control/ScreenTransition" unique_id=1574688562]
+wait_time = 0.5
+
 [connection signal="pressed" from="Control/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="timeout" from="Control/ScreenTransition/FadeTimer" to="." method="_on_fade_timer_timeout"]

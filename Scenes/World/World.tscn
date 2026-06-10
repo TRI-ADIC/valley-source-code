@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dail75ruid2e1"]
 
 [ext_resource type="PackedScene" uid="uid://op1pysbmw3kg" path="res://Scenes/Levels/Level1.tscn" id="1_0nbjp"]
+[ext_resource type="Script" uid="uid://ckq073hl2japn" path="res://Scripts/World/world.gd" id="1_c1bjq"]
 [ext_resource type="PackedScene" uid="uid://b4j8hambfn2n8" path="res://Scenes/Levels/Level2.tscn" id="2_p7pgw"]
 [ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Bridge.tscn" id="2_xf6vi"]
 [ext_resource type="PackedScene" uid="uid://bnfqjo0hfs7x5" path="res://Scenes/Structures/CauldronUnlit.tscn" id="3_27jhl"]
@@ -17,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cr38nu4ixt87j" path="res://Scenes/Rocks/Rock2.tscn" id="8_c1bjq"]
 [ext_resource type="PackedScene" uid="uid://0iqhtf01u3gg" path="res://Scenes/Rocks/Rock1.tscn" id="9_7n4rk"]
 [ext_resource type="PackedScene" uid="uid://d2s4qlq0neb3n" path="res://Scenes/Trees/Tree2.tscn" id="10_jclsg"]
+[ext_resource type="PackedScene" uid="uid://7uoxxnq1x72g" path="res://Scenes/Screen Transition/Screen Transition.tscn" id="18_liy54"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ouhkt"]
 sky_top_color = Color(0.10571615, 6.545782e-06, 0.4761901, 1)
@@ -89,9 +91,11 @@ albedo_texture = ExtResource("7_kuxid")
 uv1_triplanar = true
 
 [node name="World" type="Node3D" unique_id=677842979]
+script = ExtResource("1_c1bjq")
 
 [node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("4_5jr8x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4719844, 15.123308, 62.95889)
+top_level = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1756013573]
 environment = SubResource("Environment_5jr8x")
@@ -577,3 +581,11 @@ transform = Transform3D(0.58953476, 0, -0.80774295, 0, 1, 0, 0.80774295, 0, 0.58
 
 [node name="Level3" parent="Levels" unique_id=1382089537 instance=ExtResource("3_ng1ea")]
 transform = Transform3D(-0.8147029, 0, -0.57987857, 0, 1, 0, 0.57987857, 0, -0.8147029, 198.38025, -100.17095, -167.98581)
+
+[node name="ScreenTransition" parent="." unique_id=1098636902 instance=ExtResource("18_liy54")]
+unique_name_in_owner = true
+
+[node name="FadeTimer" type="Timer" parent="ScreenTransition" unique_id=1315878791]
+wait_time = 0.5
+
+[connection signal="timeout" from="ScreenTransition/FadeTimer" to="." method="_on_fade_timer_timeout"]
