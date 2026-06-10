@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c8b22hhdvmsgb"]
+
+[ext_resource type="Script" uid="uid://yolfdwdl70cx" path="res://Scripts/Global/global_audio.gd" id="1_5tvo1"]
+
+[node name="GlobalAudio" type="AudioStreamPlayer" unique_id=1262113579]
+script = ExtResource("1_5tvo1")

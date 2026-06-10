@@ -8,6 +8,7 @@ var button_type = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GlobalAudio.play_music_menu()
 	cat_animation.play("default")
 	spirit_animation.play("default")
 	title_animation.play("default")
