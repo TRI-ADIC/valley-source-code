@@ -319,18 +319,13 @@ material = SubResource("StandardMaterial3D_5oy68")
 [node name="Lit Cauldrons" type="Node3D" parent="Level/Structures" unique_id=424509732]
 
 [node name="CauldronLit" parent="Level/Structures/Lit Cauldrons" unique_id=1241995679 instance=ExtResource("3_5oy68")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.927187, -53.357033, -112.37705)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.7167215, -53.357033, -112.37705)
 
 [node name="CauldronLit2" parent="Level/Structures/Lit Cauldrons" unique_id=903773662 instance=ExtResource("3_5oy68")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.005259, -53.357033, -112.37705)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.1102, -53.357033, -112.37705)
 
 [node name="CauldronLit3" parent="Level/Structures/Lit Cauldrons" unique_id=1671853910 instance=ExtResource("3_5oy68")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.005259, -42.733837, -116.752945)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.0975, -42.733837, -116.752945)
 
 [node name="CauldronLit4" parent="Level/Structures/Lit Cauldrons" unique_id=1622642051 instance=ExtResource("3_5oy68")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.8795004, -42.733837, -116.752945)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1843981724]
-transform = Transform3D(-0.86602545, -0.06553995, -0.49568596, 0.022986611, -0.9955424, 0.09147083, -0.49947143, 0.06782192, 0.8636716, 0, 0, 0)
-visible = false
-shadow_enabled = true
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.7880363, -42.733837, -116.752945)
