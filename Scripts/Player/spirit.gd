@@ -30,6 +30,9 @@ func _process(delta: float) -> void:
 	
 	# Bug: Sending and retrieving spirit in quick succession causes spirit to come from... somewhere in the ground idk.
 	
+	if Input.is_action_just_pressed("send"):
+		%FlameWoosh.play()
+	
 	# Sending out spirit
 	if Input.is_action_pressed("send"):
 		var tween = create_tween()
@@ -46,6 +49,7 @@ func _process(delta: float) -> void:
 		
 	# Retrieving spirit
 	if Input.is_action_just_pressed("retrieve"):
+		%FlameWoosh.play()
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_QUAD)
 		tween.tween_property(viewmodel_mesh, "position", default_position, 0.5)

@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://py7ug8vuppqi" path="res://Animations/Spirit/frame0020.png" id="30_y5l5e"]
 [ext_resource type="Texture2D" uid="uid://35yfiq305bmq" path="res://Animations/Spirit/frame0021.png" id="31_1nh4h"]
 [ext_resource type="AudioStream" uid="uid://vg8peicvbchw" path="res://Audio/Sound Effects/Footstep.wav" id="32_iv6t0"]
+[ext_resource type="AudioStream" uid="uid://d2pyq2hgwvbee" path="res://Audio/Sound Effects/FlameWoosh.wav" id="32_wcc8i"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gv5m4"]
 
@@ -235,6 +236,14 @@ transform = Transform3D(2.5000002, 0, 0, 0, 2.5000002, 0, 0, 0, 2.5000002, 0, -1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D/Area3D" unique_id=452357604]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.20898461, 0.12868214, 0.035801888)
 shape = SubResource("BoxShape3D_u600h")
+
+[node name="Audio" type="Node3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D" unique_id=2143297802]
+
+[node name="FlameWoosh" type="AudioStreamPlayer3D" parent="Head/Camera3D/Spirit/AnimatedSprite3D/Audio" unique_id=673223547]
+unique_name_in_owner = true
+stream = ExtResource("32_wcc8i")
+pitch_scale = 3.0
+max_distance = 15.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=801409789]
 transform = Transform3D(-1, 8.742276e-08, 0, 3.821371e-15, 4.371138e-08, -1, -8.742278e-08, -0.9999998, -4.371139e-08, 0, 0, 0)

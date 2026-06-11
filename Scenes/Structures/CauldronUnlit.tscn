@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://jryuwg3r5r35" path="res://Animations/Flame/frame0019.png" id="21_5iww5"]
 [ext_resource type="Texture2D" uid="uid://pxq1xkb5yvyh" path="res://Animations/Flame/frame0020.png" id="22_riycw"]
 [ext_resource type="Texture2D" uid="uid://crex0rpu5lta0" path="res://Animations/Flame/frame0021.png" id="23_m43ai"]
+[ext_resource type="AudioStream" uid="uid://d2pyq2hgwvbee" path="res://Audio/Sound Effects/FlameWoosh.wav" id="24_lpw6k"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_kp1yh"]
 albedo_color = Color(0.20082003, 0.13206491, 0.22104996, 1)
@@ -163,5 +164,13 @@ light_size = 1.0
 transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, 0.2882236, -1.8325868, -3.5356207)
 light_size = 1.0
 omni_range = 4.80314
+
+[node name="Audio" type="Node3D" parent="." unique_id=36734783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2811179, 0)
+
+[node name="FlameWoosh" type="AudioStreamPlayer3D" parent="Audio" unique_id=289342100]
+unique_name_in_owner = true
+stream = ExtResource("24_lpw6k")
+max_distance = 25.0
 
 [connection signal="area_entered" from="CSGCylinder3D2/Area3D" to="." method="_on_area_3d_area_entered"]
