@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b4j8hambfn2n8"]
 
+[ext_resource type="Script" uid="uid://njgbxo552d7q" path="res://Scripts/Levels/level_2.gd" id="1_ngp1c"]
 [ext_resource type="Texture2D" uid="uid://dpa3e3c216eec" path="res://Textures/Valley/Stone.png" id="2_m40gi"]
 [ext_resource type="Texture2D" uid="uid://cxb553kql3lit" path="res://Textures/Valley/Dirt.png" id="2_svn12"]
 [ext_resource type="PackedScene" uid="uid://drwjdrqevlnrl" path="res://Scenes/Statues/StMonica.tscn" id="4_smuj1"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b0icl6wgnyy5a" path="res://Scenes/Structures/Bridge.tscn" id="9_d1swa"]
 [ext_resource type="PackedScene" uid="uid://cpnwm6y1uy8er" path="res://Scenes/Map Boundaries/InvisibleWall.tscn" id="9_ipaot"]
 [ext_resource type="PackedScene" uid="uid://63xm31rp4umx" path="res://Scenes/Map Boundaries/InvisibleWallDisappearing.tscn" id="10_ipaot"]
+[ext_resource type="AudioStream" uid="uid://dj57hp87fe58g" path="res://Audio/Sound Effects/Choir.wav" id="11_ao4h1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smuj1"]
 albedo_texture = ExtResource("2_svn12")
@@ -40,6 +42,7 @@ albedo_texture = ExtResource("2_m40gi")
 uv1_triplanar = true
 
 [node name="Level2" type="Node3D" unique_id=487716865]
+script = ExtResource("1_ngp1c")
 
 [node name="Level" type="Node3D" parent="." unique_id=857611902]
 
@@ -383,3 +386,12 @@ open_with_flames = {
 NodePath("../../Structures/Cauldrons/CauldronUnlit"): true,
 NodePath("../../Structures/Cauldrons/CauldronUnlit2"): true
 }
+
+[node name="Audio" type="Node3D" parent="." unique_id=1808803296]
+
+[node name="Choir" type="AudioStreamPlayer3D" parent="Audio" unique_id=221870698]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.965717, -12.414365, -79.127914)
+stream = ExtResource("11_ao4h1")
+unit_size = 5.0
+max_distance = 100.0
