@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 	
 	_spirit_move_delay(delta)
 	
-	# Bug: Sending and retrieving spirit in quick succession causes spirit to come from... somewhere in the ground idk.
+	# Bug: Sending and retrieving spirit in quick succession causes spirit to come from starting origin of player.
 	
 	if Input.is_action_just_pressed("send"):
 		%FlameWoosh.play()
