@@ -95,11 +95,13 @@ uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7n4rk"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jclsg"]
+
 [node name="World" type="Node3D" unique_id=677842979]
 script = ExtResource("1_c1bjq")
 
 [node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("4_5jr8x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6799927, 1.2444172, -142.8588)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.6278, -81.664505, -241.40637)
 top_level = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1756013573]
@@ -601,11 +603,24 @@ transform = Transform3D(9.503371, 0, -10.359921, 0, 3.0614336, 0, 11.556017, 0, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Triggers/Level3Trigger" unique_id=538537450]
 shape = SubResource("BoxShape3D_7n4rk")
 
+[node name="Level3BTrigger" type="Area3D" parent="Triggers" unique_id=1590714498]
+transform = Transform3D(44.77888, 0, 6.6338077, 0, 3.4303412, 0, -30.166225, 0, 9.847254, 222.75197, -151.97484, -114.35083)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Triggers/Level3BTrigger" unique_id=1145371910]
+shape = SubResource("BoxShape3D_jclsg")
+
+[node name="EndSceneTrigger" type="Area3D" parent="Triggers" unique_id=847749195]
+transform = Transform3D(44.77888, 0, 0.5587141, 0, 29.7763, 0, -30.166225, 0, 0.8293577, 243.07419, -143.08485, -84.18443)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Triggers/EndSceneTrigger" unique_id=979401019]
+shape = SubResource("BoxShape3D_jclsg")
+
 [node name="ScreenTransition" parent="." unique_id=1098636902 instance=ExtResource("18_liy54")]
 unique_name_in_owner = true
 
 [node name="FadeTimer" type="Timer" parent="ScreenTransition" unique_id=1315878791]
 wait_time = 0.5
+one_shot = true
 
 [node name="Audio" type="Node3D" parent="." unique_id=1462677511]
 
@@ -618,4 +633,6 @@ max_distance = 200.0
 
 [connection signal="area_entered" from="Triggers/Level2Trigger" to="." method="_on_level_2_trigger_area_entered"]
 [connection signal="area_entered" from="Triggers/Level3Trigger" to="." method="_on_level_3_trigger_area_entered"]
+[connection signal="area_entered" from="Triggers/Level3BTrigger" to="." method="_on_level_3b_trigger_area_entered"]
+[connection signal="area_entered" from="Triggers/EndSceneTrigger" to="." method="_on_end_scene_trigger_area_entered"]
 [connection signal="timeout" from="ScreenTransition/FadeTimer" to="." method="_on_fade_timer_timeout"]

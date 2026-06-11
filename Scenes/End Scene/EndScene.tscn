@@ -311,11 +311,11 @@ sprite_frames = SubResource("SpriteFrames_ymhk1")
 
 [node name="ScreenTransition" parent="Control" unique_id=1098636902 instance=ExtResource("37_oif7n")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 
 [node name="FadeTimer" type="Timer" parent="Control/ScreenTransition" unique_id=710843194]
 wait_time = 0.5
+one_shot = true
 
 [connection signal="pressed" from="Control/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="timeout" from="Control/ScreenTransition/FadeTimer" to="." method="_on_fade_timer_timeout"]

@@ -473,6 +473,7 @@ scale = Vector2(8.200001, 4.120001)
 
 [node name="FadeTimer" type="Timer" parent="Control/ScreenTransition" unique_id=1574688562]
 wait_time = 0.5
+one_shot = true
 
 [connection signal="pressed" from="Control/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

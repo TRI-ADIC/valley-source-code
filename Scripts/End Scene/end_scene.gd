@@ -6,9 +6,13 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	cat_animation.play("default")
 	spirit_animation.play("default")
 	tbc_animation.play("default")
+	%ScreenTransition/AnimationPlayer.play("fade_out")
+	await get_tree().create_timer(0.5).timeout
+	%ScreenTransition.hide()
 
 
 func _on_quit_button_pressed() -> void:

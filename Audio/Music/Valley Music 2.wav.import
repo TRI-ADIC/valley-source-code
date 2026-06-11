@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1wta7ve2lg8w"
+path="res://.godot/imported/Valley Music 2.wav-e2a61f5e6bdd4431dbc4e7245b1b403f.sample"
+
+[deps]
+
+source_file="res://Audio/Music/Valley Music 2.wav"
+dest_files=["res://.godot/imported/Valley Music 2.wav-e2a61f5e6bdd4431dbc4e7245b1b403f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

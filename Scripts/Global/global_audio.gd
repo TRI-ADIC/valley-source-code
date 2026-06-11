@@ -2,6 +2,7 @@ extends AudioStreamPlayer
 
 var menu_music = preload("res://Audio/Music/Valley Music 1.wav")
 var ambience = preload("res://Audio/Music/Valley Ambience.wav")
+var end_music = preload("res://Audio/Music/Valley Music 2.wav")
 
 func _play_music(music: AudioStream, volume = 0.0):
 	if stream == music:
@@ -22,3 +23,6 @@ func play_music_menu():
 	
 func play_valley_ambience():
 	_play_music(ambience, -20)
+	
+func play_end_music():
+	_play_music(end_music, -10)
