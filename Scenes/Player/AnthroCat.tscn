@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bgajkhlu4sgur" path="res://Animations/Spirit/frame0019.png" id="29_laq40"]
 [ext_resource type="Texture2D" uid="uid://py7ug8vuppqi" path="res://Animations/Spirit/frame0020.png" id="30_y5l5e"]
 [ext_resource type="Texture2D" uid="uid://35yfiq305bmq" path="res://Animations/Spirit/frame0021.png" id="31_1nh4h"]
+[ext_resource type="AudioStream" uid="uid://vg8peicvbchw" path="res://Audio/Sound Effects/Footstep.wav" id="32_iv6t0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gv5m4"]
 
@@ -242,3 +243,11 @@ target_position = Vector3(0, 10, 0)
 
 [node name="RayCastEndPoint" type="Node3D" parent="Head/Camera3D" unique_id=969469291]
 transform = Transform3D(1, 0, 0, -1.009742e-28, 1, 0, -7.1054274e-15, -3.5527137e-15, 1, 0, 0, -10)
+
+[node name="Audio" type="Node3D" parent="Head" unique_id=1666197661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1306072, 0)
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="Head/Audio" unique_id=2075270961]
+unique_name_in_owner = true
+stream = ExtResource("32_iv6t0")
+volume_db = -20.935
