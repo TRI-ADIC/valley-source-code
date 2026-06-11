@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b0icl6wgnyy5a"]
 
 [ext_resource type="Script" uid="uid://qif6ftwh2pqh" path="res://Scripts/Structures/bridge.gd" id="1_3gfhm"]
+[ext_resource type="AudioStream" uid="uid://cnps7ykvrb8n0" path="res://Audio/Sound Effects/BridgeRising.wav" id="2_rvlhr"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_uubhm"]
 albedo_color = Color(0.20081225, 0.14471987, 0.27422827, 1)
@@ -20,6 +21,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -74.864624, 0.24859619)
 use_collision = true
 size = Vector3(3.53125, 149.75757, 2.6382446)
 material = SubResource("ORMMaterial3D_uubhm")
+
+[node name="Audio" type="Node3D" parent="BridgeMesh" unique_id=1326524847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.541744, 0)
+
+[node name="BridgeRising" type="AudioStreamPlayer3D" parent="BridgeMesh/Audio" unique_id=1080883360]
+unique_name_in_owner = true
+stream = ExtResource("2_rvlhr")
+attenuation_model = 2
+volume_db = 5.982
+unit_size = 30.0
 
 [node name="RaisedPoint" type="Node3D" parent="." unique_id=1001919182]
 unique_name_in_owner = true

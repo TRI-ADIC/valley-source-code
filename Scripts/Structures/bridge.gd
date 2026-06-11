@@ -22,5 +22,6 @@ func _check_if_lit():
 			break
 			
 	if lift:
+		%BridgeRising.play()
 		var tween = create_tween()
-		tween.tween_property(%BridgeMesh, "position", %RaisedPoint.position, 3).set_trans(Tween.TRANS_SINE)
+		tween.tween_property(%BridgeMesh, "position", %RaisedPoint.position, 17).set_trans(Tween.TRANS_SINE)
