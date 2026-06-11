@@ -49,12 +49,14 @@ func _process(delta: float) -> void:
 		
 	# Retrieving spirit
 	if Input.is_action_just_pressed("retrieve"):
-		%FlameWoosh.play()
-		var tween = create_tween()
-		tween.set_trans(Tween.TRANS_QUAD)
-		tween.tween_property(viewmodel_mesh, "position", default_position, 0.5)
-		# Enable inheriting of parent (so spirit rotates with camera again)
-		viewmodel_mesh.top_level = false
+		# Only trigger if spirit has been sent out already
+		if viewmodel_mesh.top_level:
+			%FlameWoosh.play() 
+			var tween = create_tween()
+			tween.set_trans(Tween.TRANS_QUAD)
+			tween.tween_property(viewmodel_mesh, "position", default_position, 0.5)
+			# Enable inheriting of parent (so spirit rotates with camera again)
+			viewmodel_mesh.top_level = false
 	
 func _input(event):
 	if event is InputEventMouseMotion:
