@@ -394,4 +394,4 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.965717, -12.414365, -79.127914)
 stream = ExtResource("11_ao4h1")
 unit_size = 5.0
-max_distance = 100.0
+max_distance = 40.0

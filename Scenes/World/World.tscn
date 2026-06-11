@@ -96,7 +96,7 @@ uv1_triplanar = true
 script = ExtResource("1_c1bjq")
 
 [node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("4_5jr8x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.617089, 15.123308, -146.75175)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.64919, -72.03491, -250.4397)
 top_level = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1756013573]
