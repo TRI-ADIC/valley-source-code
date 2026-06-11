@@ -147,22 +147,27 @@ sprite_frames = SubResource("SpriteFrames_jhfhl")
 [node name="OmniLight3D" type="OmniLight3D" parent="Flame" unique_id=505672031]
 transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, 0.12682566, 0.64328766, 0.0010480881)
 light_size = 1.0
+light_specular = 1.134
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Flame" unique_id=1159494346]
 transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, -2.4006944, -1.8325868, 0.0010480881)
 light_size = 1.0
+light_specular = 1.134
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Flame" unique_id=1729316878]
 transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, 0.2844488, -1.8325868, 3.3151383)
 light_size = 1.0
+light_specular = 1.134
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Flame" unique_id=2022582788]
 transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, 3.3822763, -1.8325868, -0.038122497)
 light_size = 1.0
+light_specular = 1.134
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="Flame" unique_id=1641020164]
 transform = Transform3D(1.3333334, 0, 0, 0, 1.3333334, 0, 0, 0, 1.3333334, 0.2882236, -1.8325868, -3.5356207)
 light_size = 1.0
+light_specular = 1.134
 omni_range = 4.80314
 
 [node name="Audio" type="Node3D" parent="." unique_id=36734783]
