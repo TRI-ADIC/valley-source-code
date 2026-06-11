@@ -450,6 +450,7 @@ layout_mode = 2
 text = "START"
 
 [node name="OptionsButton" type="Button" parent="Control/VBoxContainer" unique_id=1028151772]
+visible = false
 layout_mode = 2
 text = "OPTIONS"
 
