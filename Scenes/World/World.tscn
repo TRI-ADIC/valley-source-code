@@ -449,9 +449,9 @@ size = Vector3(13.160522, 13.423737, 7.4771285)
 material = SubResource("StandardMaterial3D_x5sp8")
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=2067629299]
-transform = Transform3D(0.20587882, -0.08489992, -0.97488785, 0.12424044, 0.9904354, -0.060016625, 0.9706588, -0.10876432, 0.21445763, 147.40196, -78.29339, -226.6109)
+transform = Transform3D(0.20587882, -0.08489992, -0.97488785, 0.12424044, 0.9904354, -0.060016625, 0.9706588, -0.10876432, 0.21445763, 149.56343, -78.160324, -227.08638)
 use_collision = true
-size = Vector3(13.160522, 13.423737, 7.4771285)
+size = Vector3(13.160522, 13.423737, 11.911416)
 material = SubResource("StandardMaterial3D_x5sp8")
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Environment/Valley/Level 2 to 3 Transition" unique_id=1545241046]
