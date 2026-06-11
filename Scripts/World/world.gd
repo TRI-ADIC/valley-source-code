@@ -11,3 +11,10 @@ func _ready() -> void:
 
 func _on_fade_timer_timeout() -> void:
 	%ScreenTransition.hide()
+
+
+func _on_level_2_trigger_area_entered(area: Area3D) -> void:
+	if !GlobalAudio.has_stream_playback():
+		GlobalAudio.play_valley_ambience()
+		var tween = create_tween()
+		tween.tween_property(GlobalAudio, "volume_db", 0, 10).set_trans(Tween.TRANS_LINEAR)

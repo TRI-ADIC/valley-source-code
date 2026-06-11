@@ -90,11 +90,13 @@ uv1_triplanar = true
 albedo_texture = ExtResource("7_kuxid")
 uv1_triplanar = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_c1bjq"]
+
 [node name="World" type="Node3D" unique_id=677842979]
 script = ExtResource("1_c1bjq")
 
 [node name="AnthroCat" parent="." unique_id=1476496864 instance=ExtResource("4_5jr8x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4719844, 15.123308, 62.95889)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.617089, 15.123308, -146.75175)
 top_level = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1756013573]
@@ -582,10 +584,19 @@ transform = Transform3D(0.58953476, 0, -0.80774295, 0, 1, 0, 0.80774295, 0, 0.58
 [node name="Level3" parent="Levels" unique_id=1382089537 instance=ExtResource("3_ng1ea")]
 transform = Transform3D(-0.8147029, 0, -0.57987857, 0, 1, 0, 0.57987857, 0, -0.8147029, 198.38025, -100.17095, -167.98581)
 
+[node name="Triggers" type="Node3D" parent="." unique_id=1241777428]
+
+[node name="Level2Trigger" type="Area3D" parent="Triggers" unique_id=1143810996]
+transform = Transform3D(17.119415, 0, -9.706881, 0, 5.711381, 0, 16.644997, 0, 9.983546, 14.990918, -35.91622, -169.83829)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Triggers/Level2Trigger" unique_id=1028963991]
+shape = SubResource("BoxShape3D_c1bjq")
+
 [node name="ScreenTransition" parent="." unique_id=1098636902 instance=ExtResource("18_liy54")]
 unique_name_in_owner = true
 
 [node name="FadeTimer" type="Timer" parent="ScreenTransition" unique_id=1315878791]
 wait_time = 0.5
 
+[connection signal="area_entered" from="Triggers/Level2Trigger" to="." method="_on_level_2_trigger_area_entered"]
 [connection signal="timeout" from="ScreenTransition/FadeTimer" to="." method="_on_fade_timer_timeout"]
