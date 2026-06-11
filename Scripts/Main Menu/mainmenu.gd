@@ -12,6 +12,9 @@ func _ready() -> void:
 	cat_animation.play("default")
 	spirit_animation.play("default")
 	title_animation.play("default")
+	%ScreenTransition/AnimationPlayer.play("fade_out")
+	await get_tree().create_timer(0.5).timeout
+	%ScreenTransition.hide()
 
 func _on_start_button_pressed() -> void:
 	button_type = "start"

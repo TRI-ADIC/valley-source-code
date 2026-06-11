@@ -466,7 +466,6 @@ frame_progress = 0.7056892
 
 [node name="ScreenTransition" parent="Control" unique_id=1098636902 instance=ExtResource("43_6tjnn")]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 offset_right = -1676.2195
 offset_bottom = -796.2913
